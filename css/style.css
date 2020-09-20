@@ -586,6 +586,10 @@ ins {
   background-color: var(--dark-blue);
 }
 
+.footer__logo {
+  background-color: var(--basic-red);
+}
+
 .footer-nav, .footer-menu__list {
   list-style: none;
   padding: 0;
