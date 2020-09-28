@@ -332,6 +332,7 @@ input[type="search"]:focus {
   gap: 20px;
   width: 940px;
   margin: 0 auto;
+  position: relative;
 }
 
 .site-menu__item--materials {
@@ -368,7 +369,7 @@ input[type="search"]:focus {
   font-weight: 700;
   color: var(--basic-white);
   width: 277px;
-  height: 125px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   padding-left: 23px;
@@ -387,7 +388,7 @@ input[type="search"]:focus {
   padding: 10px 20px;
   width: 95px;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .site-menu__link:hover {
@@ -398,6 +399,76 @@ input[type="search"]:focus {
 .site-menu__link:focus {
   background-color: var(--grey-del);
   opacity: 0.3;
+}
+
+.site-menu__slider {
+  position: absolute;
+  top: 485px;
+  left: 170px;
+}
+
+.site-menu__slide-wrapper--perforator {
+  position: relative;
+}
+
+.slide__heading {
+  position: absolute;
+  color: var(--basic-white);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  left: 24px;
+  top: 23px;
+  margin-top: 0px;
+}
+
+.slide__text {
+  position: absolute;
+  color: var(--basic-white);
+  font-size: 18px;
+  font-weight: var(--cuprum-weight);
+  line-height: 24px;
+  left: 24px;
+  top: 64px;
+  margin-top: 0px;
+}
+
+.slide__button--forward {
+  position: absolute;
+  left: 24px;
+  top: 125px;
+  background-color: transparent;
+  border: 3px solid transparent;
+  border-left: 3px solid var(--basic-white);
+  border-bottom: 3px solid var(--basic-white);
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+}
+
+.slide__button--back {
+  position: absolute;
+  right: 24px;
+  top: 125px;
+  background-color: transparent;
+  border: 3px solid transparent;
+  border-left: 3px solid var(--basic-white);
+  border-bottom: 3px solid var(--basic-white);
+  width: 30px;
+  height: 30px;
+  transform: rotate(225deg);
+}
+
+.slide__link--open {
+  position: absolute;
+  bottom: 27px;
+  left: 24px;
+  padding: 10px 46px;
+}
+
+.slide__button {
+  position: absolute;
 }
 
 /* index popular-products */
