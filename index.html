@@ -13,7 +13,7 @@
 <body class="page-body">
   <header class="main-header">
     <div class="header-wrapper">
-      <div class="header__menu-wrapper wrapper">
+      <div class="header__menu-wrapper">
         <a class="header__logo-link">
           <img class="header__logo" src="img/logo-technomart-header.jpg" width="107" height="17" alt="Лого Техномарт" >
         </a>
@@ -34,8 +34,8 @@
         </ul>
       </div>
     </div>
-    <div class="header__info-wrapper wrapper">
-      <i class="info__text">Интернет-магазин строительных материалов и инструментов для ремонта</i>
+    <div class="header__info-wrapper">
+      <i class="info__text">Интернет-магазин строительных материалов <br>и инструментов для ремонта</i>
       <div class="info__contacts-wrapper">
         <a class="info__tel" href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a>
         <p class="info__address">г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
@@ -45,7 +45,7 @@
         <a class="account__link account__link--registration" href="blank.html">Регистрация</a>
       </div>
     </div>
-    <nav class="header__nav wrapper">
+    <nav class="header__nav">
       <ul class="nav__list">
         <li class="nav__item"><a class="nav-item__link nav-item__link--home">Главная</a></li>
         <li class="nav__item"><a class="nav-item__link nav-item__link--company" href="blank.html">Компания</a></li>
@@ -59,7 +59,6 @@
   </header>
   <main class="container">
     <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
-    <div class="wrapper">
       <section class="site-menu">
         <h2 class="visually-hidden">Меню сайта</h2>
         <ul class="site-menu__list">
@@ -81,14 +80,17 @@
         </ul>
         <div class="site-menu__slider">
           <div class="site-menu__slide-wrapper site-menu__slide-wrapper--perforator">
-            <p class="slide__heading">Перфораторы</p>
+            <!--
+              <p class="slide__heading">Перфораторы</p>
             <p class="slide__text">Настоящие мужские игрушки</p>
+            -->
             <img class="slide__photo" src="img/perforator-slide.jpg" width="620" height="266" alt="Перфоратор Bosch">
             <a class="slide__link slide__link--open link button-link" href="catalog.html">Открыть каталог</a>
             <button class="slide__button slide__button--forward" type="button">Вперед</button>
             <button class="slide__button slide__button--back" type="button">Назад</button>
           </div>
-          <div class="site-menu__slide-wrapper site-menu__slide-wrapper--drill">
+          <!--
+            <div class="site-menu__slide-wrapper site-menu__slide-wrapper--drill visually-hidden">
             <p class="slide__heading">Дрели</p>
             <p class="slide__text">Соседям на радость!</p>
             <img class="slide__photo" src="img/drill-slide.jpg" width="620" height="266" alt="Дрель Bosch">
@@ -96,8 +98,9 @@
             <button class="slide__button slide__button--forward" type="button">Вперед</button>
             <button class="slide__button slide__button--back" type="button">Назад</button>
           </div>
+        -->
         </div>
-    </div>
+
     </section>
     <section class="popular-products">
       <div class="popular-products__heading-wrapper">
@@ -235,87 +238,89 @@
       </ul>
     </section>
     <section class="services">
-      <h2 class="services__heading">Сервисы</h2>
-      <p class="services__text">
-        Хороший интернет-магазин отличается от плохого не только ценами!
-        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными!
-      </p>
-      <ul class="services__list">
-        <li class="services-list__item">
-          <input class="services__button services__button--delivery" type="radio" name="services_delivery" id="services-delivery" checked>
-          <label for="services-delivery">Доставка</label>
-        </li>
-        <li class="services-list__item">
-          <input class="services__button services__button--guarantee" type="radio" name="services_guarantee" id="services-guarantee">
-          <label for="services-guarantee">Гарантия</label>
-        </li>
-        <li class="services-list__item">
-          <input class="services__button services__button--credit" type="radio" name="services_credit" id="services-credit">
-          <label for="services-credit">Кредит</label>
-        </li>
-      </ul>
-
-      <div class="service__slider">
-        <div class="service-slide__wrapper service-slide__wrapper--delivery">
-          <h3 class="service-slider__heading">Доставка</h3>
-          <p class="service-slider__text">
-            Мы с удовольствием доставим ваш товар прямо
-            к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем,
-            Поднимая его на ваш этаж!
-          </p>
-        </div>
-        <div class="service-slide__wrapper service-slide__wrapper--guarantee">
-          <h3 class="service-slider__heading">Гарантия</h3>
-          <p class="service-slider__text">
-            Если купленный у нас товар поломается или заискрит,
-            а также в случае пожара, спровоцированного его возгоранием,
-            вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-            сгоревший товар на новый.
-            Дом уж восстановите как-нибудь сами.
-          </p>
-        </div>
-        <div class="service-slide__wrapper service-slide__wrapper--credit">
-          <h3 class="service-slider__heading">Кредит</h3>
-          <p class="service-slider__text">
-            Залезть в долговую яму стало проще!
-            Кредитные консультанты придут вам на помощь.
-            <a class="services__link services__link--send-request link" href="blank.html">Отправить заявку</a>
-          </p>
+      <div class="services-wrapper">
+        <h2 class="services__heading">Сервисы</h2>
+        <p class="services__text">
+          Хороший интернет-магазин отличается от плохого не только ценами!
+          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными!
+        </p>
+        <div class="services-list-wrapper">
+          <ul class="services__list">
+            <li class="services-list__item">
+              <input class="services__button services__button--delivery" type="radio" name="services_delivery" id="services-delivery" checked>
+              <label for="services-delivery">Доставка</label>
+            </li>
+            <li class="services-list__item">
+              <input class="services__button services__button--guarantee" type="radio" name="services_guarantee" id="services-guarantee">
+              <label for="services-guarantee">Гарантия</label>
+            </li>
+            <li class="services-list__item">
+              <input class="services__button services__button--credit" type="radio" name="services_credit" id="services-credit">
+              <label for="services-credit">Кредит</label>
+            </li>
+          </ul>
+          <div class="service__slider">
+            <div class="service-slide__wrapper service-slide__wrapper--delivery">
+              <h3 class="service-slider__heading">Доставка</h3>
+              <p class="service-slider__text">
+                Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем,
+                Поднимая его на ваш этаж!
+              </p>
+            </div>
+            <div class="service-slide__wrapper service-slide__wrapper--guarantee">
+              <h3 class="service-slider__heading">Гарантия</h3>
+              <p class="service-slider__text">
+                Если купленный у нас товар поломается или заискрит,
+                а также в случае пожара, спровоцированного его возгоранием,
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+                сгоревший товар на новый.
+                Дом уж восстановите как-нибудь сами.
+              </p>
+            </div>
+            <div class="service-slide__wrapper service-slide__wrapper--credit">
+              <h3 class="service-slider__heading">Кредит</h3>
+              <p class="service-slider__text">
+                Залезть в долговую яму стало проще!
+                Кредитные консультанты придут вам на помощь.
+                <a class="services__link services__link--send-request link" href="blank.html">Отправить заявку</a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-
     </section>
-    <section class="about-company">
-      <h2 class="about-company__heading">Компания "Техномарт"</h2>
-      <div class="about-company__text-wrapper">
-        <p class="about-company__text">
-          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
-          строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+    <div class="about-company-wrapper">
+      <section class="about-company">
+        <h2 class="about-company__heading">Компания "Техномарт"</h2>
+          <p class="about-company__text">
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
+            строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+          </p>
+          <p class="about-company__text about-company__text--delivery">
+            Мы можем доставить ваш товар в самые отдаленные точки России!
+            Техномарт работает со многими транспортными компаниями:
+          </p>
+        <ul class="about-company__delivery-list">
+          <li class="delivery-list__item">Деловые линии</li>
+          <li class="delivery-list__item">Автотрейдинг</li>
+          <li class="delivery-list__item">ЖелДорЭкпедиция</li>
+        </ul>
+        <a class="about-company__link link button-link" href="blank.html">Подробнее о компании</a>
+      </section>
+      <section class="contacts">
+        <h2 class="contacts__heading">Контакты</h2>
+        <p class="contacts__text">
+          Вы можете забрать товар сами,
+          заехав в наш офис:
         </p>
-        <p class="about-company__text">
-          Мы можем доставить ваш товар в самые отдаленные точки России!
-          Техномарт работает со многими транспортными компаниями:
-        </p>
-      </div>
-      <ul class="about-company__delivery-list">
-        <li class="delivery-list__item">Деловые линии</li>
-        <li class="delivery-list__item">Автотрейдинг</li>
-        <li class="delivery-list__item">ЖелДорЭкпедиция</li>
-      </ul>
-      <a class="about-company__link link button-link" href="blank.html">Подробнее о компании</a>
-    </section>
-    <section class="contacts">
-      <h2 class="contacts__heading">Контакты</h2>
-      <p class="contacts__text">
-        Вы можете забрать товар сами,
-        заехав в наш офис:
-      </p>
-      <a class="contacts__link contacts__link--map" href="blank.html">
-        <img class="contacts__map" src="img/..." width="300" height="158" alt="г.Санкт-Петербург ул. Б. Конюшенная д.19/8">
-      </a>
-      <a class="contacts__link contacts__link--help link button-link" href="blank.html">Заблудились? Напишите нам!</a>
-    </section>
+        <a class="contacts__link contacts__link--map" href="blank.html">
+          <img class="contacts__map" src="img/..." width="300" height="158" alt="г.Санкт-Петербург ул. Б. Конюшенная д.19/8">
+        </a>
+        <a class="contacts__link contacts__link--help link button-link" href="blank.html">Заблудились? Напишите нам!</a>
+      </section>
+    </div>
   </main>
   <footer class="main-footer">
     <section class="main-footer__content">
@@ -354,39 +359,41 @@
       </div>
     </section>
     <section class="main-footer__copy">
-      <h2 class="visually-hidden">Копирайт</h2>
-      <div class="copy__text-wrapper">
-        <p class="copy__text">
+      <div class="footer-copy-wrapper">
+        <h2 class="visually-hidden">Копирайт</h2>
+        <div class="copy__text-wrapper">
+          <p class="copy__text">
           &copy;
           2010-2019 Компания "Техномарт"
           Все права защищены
-        </p>
-      </div>
-      <div class="copy__socials-wrapper">
-        <ul class="socials__list">
-          <li class="socials__item">
-            <a class="socials__link socials__link--vkontakte" href="blank.html"></a>
-            <span class="visually-hidden">Вконтакте</span>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--facebook" href="blank.html"></a>
-            <span class="visually-hidden">Фейсбук</span>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--instagram" href="blank.html"></a>
-            <span class="visually-hidden">Инстаграм</span>
-          </li>
-        </ul>
-      </div>
-      <div class="copy-feedback__wrapper">
-        <p class="copy__feedback">
+          </p>
+        </div>
+        <div class="copy__socials-wrapper">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--vkontakte" href="blank.html"></a>
+              <span class="visually-hidden">Вконтакте</span>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--facebook" href="blank.html"></a>
+              <span class="visually-hidden">Фейсбук</span>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram" href="blank.html"></a>
+              <span class="visually-hidden">Инстаграм</span>
+            </li>
+          </ul>
+        </div>
+        <div class="copy-feedback__wrapper">
+          <p class="copy__feedback">
           Обратная связь:
           <a class="feedback__link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="copy__developed">
+          </p>
+          <p class="copy__developed">
           Разработано -
           <a class="developed__link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-        </p>
+          </p>
+       </div>
       </div>
     </section>
   </footer>
