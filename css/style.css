@@ -942,6 +942,37 @@ ins::after {
   text-decoration: none;
 }
 
+.sorting__link--up, .sorting__link--down {
+  position: relative;
+  width: 11px;
+  height: 10px;
+  background-color: transparent;
+}
+
+.sorting__link--up::after, .sorting__link--down::after {
+  position: absolute;
+  content: "";
+  border: 10px solid transparent;
+  border-bottom: 10px solid var(--grey-checkbox-and-icon);
+}
+
+
+.sorting__link--up::after:focus, .sorting__link--down::after:focus {
+  border-bottom: 10px solid var(--basic-red);
+}
+
+.sorting__link--up::after {
+  left: -10px;
+  bottom: 5px;
+}
+
+.sorting__link--down::after {
+  transform: rotate(180deg);
+  bottom: -5px;
+  left: -20px;
+}
+
+
 /* catalog filter */
 
 .catalog__filter {
