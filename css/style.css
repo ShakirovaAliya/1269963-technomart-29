@@ -101,12 +101,16 @@ img {
 }
 
 .header__logo-link {
-  background-color: var(--basic-red);
   width: 220px;
+  background-color: var(--basic-red);
 }
 
-.header__logo-link:focus {
+.header__logo-link:active {
   background-color: var(--dark-red);
+}
+
+.header__logo {
+  padding: 15px 56px;
 }
 
 .header-menu__list {
@@ -155,7 +159,7 @@ input[type="search"]:focus {
   width: 940px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: min-content min-content min-content;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 90px;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -232,20 +236,22 @@ input[type="search"]:focus {
 
 .header__account-wrapper {
   display: flex;
-  width: 270px;
+  width: 280px;
   justify-content: center;
   height: 45px;
+
 }
 
 .account__link--login {
-  width: 120px;
-  padding: 10px 5px;
-  margin-right: 20px;
+  margin-right: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 27px;
+  padding-left: 45px;
 }
 
 .account__link--registration {
-  width: 150px;
-  padding: 10px 5px;
+  padding: 12px 24px;
 }
 
 .account__link {
@@ -255,6 +261,7 @@ input[type="search"]:focus {
   color: var(--basic-black);
   text-align: center;
   background-color: var(--basic-white);
+
 }
 
 .account__link:hover {
@@ -1271,7 +1278,7 @@ input[type="range"] {
 }
 
 .footer__logo {
-  background-color: var(--basic-red);
+  padding: 23px 41px;
 }
 
 .footer__logo-link {
