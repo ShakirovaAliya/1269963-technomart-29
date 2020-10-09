@@ -13,20 +13,20 @@
 <body class="page-body">
   <header class="main-header">
     <div class="header-wrapper">
-      <div class="header__menu-wrapper">
+      <div class="header__menu-wrapper container">
         <a class="header__logo-link">
           <img class="header__logo" src="img/logo-technomart-header.svg" width="108" height="18" alt="Лого Техномарт">
         </a>
         <ul class="header-menu__list">
-          <li class="menu-list__item">
-            <label for="menu-item__search">Поиск:</label>
-            <input type="search">
+          <li class="menu-list__item menu-list__item--search">
+            <label for="menu-item__search" class="visually-hidden">Поиск:</label>
+            <input type="search" placeholder="Поиск:">
           </li>
           <li class="menu-list__item">
-            <a class="menu-item__link menu-item__link--marks" href="blank.html">Закладки</a>
+            <a class="menu-item__link menu-item__link--marks" href="blank.html">Закладки:</a>
           </li>
           <li class="menu-list__item">
-            <a class="menu-item__link menu-item__link--cart" href="blank.html">Корзина</a>
+            <a class="menu-item__link menu-item__link--cart" href="blank.html">Корзина:</a>
           </li>
           <li class="menu-list__item">
             <a class="menu-item__link menu-item__link--checkout" href="blank.html">Оформить заказ</a>
@@ -34,7 +34,7 @@
         </ul>
       </div>
     </div>
-    <div class="header__info-wrapper">
+    <div class="header__info-wrapper container">
       <i class="info__text">Интернет-магазин строительных материалов <br>и инструментов для ремонта</i>
       <div class="info__contacts-wrapper">
         <a class="info__tel" href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a>
@@ -45,7 +45,7 @@
         <a class="account__link account__link--registration" href="blank.html">Регистрация</a>
       </div>
     </div>
-    <nav class="header__nav">
+    <nav class="header__nav container">
       <ul class="nav__list">
         <li class="nav__item"><a class="nav-item__link nav-item__link--home">Главная</a></li>
         <li class="nav__item"><a class="nav-item__link nav-item__link--company" href="blank.html">Компания</a></li>
@@ -59,7 +59,7 @@
   </header>
   <main class="container">
     <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
-      <section class="site-menu">
+      <section class="site-menu container">
         <h2 class="visually-hidden">Меню сайта</h2>
         <ul class="site-menu__list">
           <li class="site-menu__item site-menu__item--materials">Материалы
@@ -83,7 +83,7 @@
             <p class="slide__heading">Перфораторы</p>
             <p class="slide__text">Настоящие мужские игрушки</p>
             <img class="slide__photo" src="img/perforator-slide.jpg" width="620" height="266" alt="Перфоратор Bosch">
-            <a class="slide__link slide__link--open link button-link" href="catalog.html">Открыть каталог</a>
+            <a class="slide__link slide__link--open button-link" href="catalog.html">Открыть каталог</a>
             <button class="slide__button slide__button--forward" type="button"><span class="visually-hidden">Вперед</span></button>
             <button class="slide__button slide__button--back" type="button"><span class="visually-hidden">Назад</span></button>
           </div>
@@ -103,7 +103,7 @@
     <section class="popular-products">
       <div class="popular-products__heading-wrapper">
         <h2 class="popular-products__heading">Популярные товары</h2>
-        <a class="popular-products__link link button-link" href="catalog.html">Все популярные товары</a>
+        <a class="popular-products__link button-link" href="catalog.html">Все популярные товары</a>
       </div>
       <ul class="popular-products__list">
         <li class="products__item">
@@ -179,10 +179,10 @@
         </li>
       </ul>
     </section>
-    <section class="popular-brands">
+    <section class="popular-brands container">
       <div class="popular-brands__heading-wrapper">
         <h2 class="popular-brands__heading">Популярные производители</h2>
-        <a class="popular-brands__link link button-link" href="blank.html">Все производители</a>
+        <a class="popular-brands__link button-link" href="blank.html">Все производители</a>
       </div>
       <ul class="popular-brands__list">
         <li class="brands__item">
@@ -236,7 +236,7 @@
       </ul>
     </section>
     <section class="services">
-      <div class="services-wrapper">
+      <div class="services-wrapper container">
         <h2 class="services__heading">Сервисы</h2>
         <p class="services__text">
           Хороший интернет-магазин отличается от плохого не только ценами!
@@ -282,17 +282,18 @@
               <p class="service-slider__text">
                 Залезть в долговую яму стало проще!
                 Кредитные консультанты придут вам на помощь.
-                <a class="services__link services__link--send-request link" href="blank.html">Отправить заявку</a>
+                <a class="services__link services__link--send-request" href="blank.html">Отправить заявку</a>
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="about-company-wrapper">
+    <div class="about-company-wrapper container">
       <section class="about-company">
-        <h2 class="about-company__heading">Компания "Техномарт"</h2>
-          <p class="about-company__text">
+        <div class="about-company-content">
+          <h2 class="about-company__heading">Компания "Техномарт"</h2>
+          <p class="about-company__text about-company__text--choice">
             Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
             строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
           </p>
@@ -300,30 +301,33 @@
             Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:
           </p>
-        <ul class="about-company__delivery-list">
-          <li class="delivery-list__item">Деловые линии</li>
-          <li class="delivery-list__item">Автотрейдинг</li>
-          <li class="delivery-list__item">ЖелДорЭкпедиция</li>
-        </ul>
-        <a class="about-company__link link button-link" href="blank.html">Подробнее о компании</a>
+          <ul class="about-company__delivery-list">
+            <li class="delivery-list__item">Деловые линии</li>
+            <li class="delivery-list__item">Автотрейдинг</li>
+            <li class="delivery-list__item">ЖелДорЭкпедиция</li>
+          </ul>
+        </div>
+        <a class="about-company__link button-link" href="blank.html">Подробнее о компании</a>
       </section>
       <section class="contacts">
-        <h2 class="contacts__heading">Контакты</h2>
-        <p class="contacts__text">
-          Вы можете забрать товар сами,
-          заехав в наш офис:
-        </p>
-        <a class="contacts__link contacts__link--map" href="blank.html">
-          <img class="contacts__map" src="img/..." width="300" height="158" alt="г.Санкт-Петербург ул. Б. Конюшенная д.19/8">
-        </a>
-        <a class="contacts__link contacts__link--help link button-link" href="blank.html">Заблудились? Напишите нам!</a>
+        <div class="contacts-content">
+          <h2 class="contacts__heading">Контакты</h2>
+          <p class="contacts__text">
+            Вы можете забрать товар сами,
+            заехав в наш офис:
+          </p>
+          <a class="contacts__link contacts__link--map" href="blank.html">
+            <img class="contacts__map" src="../img/map.jpg" width="300" height="158" alt="г.Санкт-Петербург ул. Б. Конюшенная д.19/8">
+          </a>
+        </div>
+        <a class="contacts__link contacts__link--help button-link" href="blank.html">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
   <footer class="main-footer">
     <section class="main-footer__content">
       <h2 class="visually-hidden">Навигация</h2>
-      <div class="footer-nav__wrapper">
+      <div class="footer-nav__wrapper container">
         <a class="footer__logo-link" href="index.html">
           <img class="footer__logo" src="img/logo-technomart-footer.svg" width="136" height="21" alt="Лого Техномарт">
         </a>
@@ -335,7 +339,7 @@
           <li class="footer-nav__item"><a class="footer-nav__link footer__link--contacts" href="blank.html">Контакты</a></li>
         </ul>
       </div>
-      <div class="footer-menu__wrapper">
+      <div class="footer-menu__wrapper container">
         <div class="footer__address-wrapper">
           <p class="footer__address">г.Санкт-Петербург ул. Б. Конюшенная д.19/8</p>
           <a class="footer__link footer__link--tel" href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a>
@@ -357,7 +361,7 @@
       </div>
     </section>
     <section class="main-footer__copy">
-      <div class="footer-copy-wrapper">
+      <div class="footer-copy-wrapper container">
         <h2 class="visually-hidden">Копирайт</h2>
         <div class="copy__text-wrapper">
           <p class="copy__text">
