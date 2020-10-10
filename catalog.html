@@ -98,21 +98,24 @@
       <aside class="filters">
         <h3 class="visually-hidden">Фильтр товаров</h3>
         <form class="filter" action="blank.html" method="get">
+          <p class="form__heading">ФИЛЬТР:</p>
           <fieldset>
-            <p class="form__heading">ФИЛЬТР:</p>
-            <label class="filter-price-label" for="filter-price">Цена:</label>
-            <div class="filter-price-input-wrapper">
-              <input type="range" min="0" max="30000" name="price" id="filter-price">
-            </div>
-            <div class="filter-price-wrapper">
-              <div class="min-price-wrapper">
-                <span class="min-price">0</span>
+            <legend>Цена:</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
               </div>
-              <div>
-                <span>-</span>
-              </div>
-              <div class="max-price-wrapper">
-                <span class="max-price">30000</span>
+              <div class="price-controls">
+                <label class="min-price">
+                  <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  - <input type="number" name="max-price" value="30000">
+                </label>
               </div>
             </div>
           </fieldset>
