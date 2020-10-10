@@ -208,6 +208,10 @@ input[type="search"]:focus {
   fill: var(--basic-red);
 }
 
+.menu-list__item:not(:first-child) {
+  max-width: 150px;
+}
+
 .menu-item__link--marks {
   padding-left: 45px;
   padding-right: 35px;
@@ -260,7 +264,7 @@ input[type="search"]:focus {
 .menu-item__link--checkout {
   background-color: var(--basic-green);
   padding-left: 20px;
-  padding-right: 16px;
+  padding-right: 15px;
 }
 
 .menu-item__link--checkout:hover {
@@ -700,7 +704,7 @@ input[type="search"]:focus {
 }
 
 .products__item:hover, .products__item:focus, .products__item:active {
-  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .products__item:nth-child(2n) {
@@ -870,11 +874,11 @@ ins::after {
 }
 
 .brands__item:hover {
-  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .brands__item:focus, .brands__item:active {
-  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
   opacity: 0.5;
 }
 
@@ -1145,6 +1149,7 @@ ins::after {
   display: grid;
   grid-auto-columns: 1fr 1fr;
   gap: 20px;
+  margin-bottom: 59px;
 }
 
 .catalog {
@@ -1484,10 +1489,15 @@ input[type="range"] {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  margin-bottom: 48px;
 }
 
 .catalog-products__item {
   border: 1px solid var(--grey-card-border);
+}
+
+.catalog-products__item:hover, .catalog-products__item:focus, .catalog-products__item:active {
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .catalog-products__item:nth-child(3n), .catalog-products__item:nth-child(4), .catalog-products__item:nth-child(7) {
@@ -1531,10 +1541,23 @@ input[type="range"] {
 /* catalog pagination */
 
 .pagination {
-  margin: 50px 0px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.page__number {
+.pagination__item {
+  margin-right: 10px;
+}
+
+.pagination__item:last-child {
+  margin-right: 0;
+}
+
+.pagination__item a {
+  display: block;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1544,18 +1567,17 @@ input[type="range"] {
   border: 1px solid var(--grey-button-border);
   text-align: center;
   padding: 10px 15px;
-  margin-right: 10px;
 }
 
-.page__number:hover {
+.pagination__item a:hover {
   border: 1px solid var(--grey-checkbox-and-icon);
 }
 
-.page__number:focus {
+.pagination__item a:focus {
   border: 1px solid var(--basic-red);
 }
 
-.page__number:active {
+.pagination__item a:active {
   background-color: var(--basic-red);
   color: var(--basic-white);
 }
