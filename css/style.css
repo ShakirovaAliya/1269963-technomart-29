@@ -1585,11 +1585,11 @@ ins::after {
 }
 
 .range-controls .toggle-min {
-  left: 18px;
+  left: 15px;
 }
 
 .range-controls .toggle-max {
-  left: 140px;
+  left: 135px;
 }
 
 .price-controls {
