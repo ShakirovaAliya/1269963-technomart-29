@@ -10,6 +10,7 @@
   --grey-card-border: #eaeaea;
   --grey-button-border: #e5e5e5;
   --grey-services: #f1f5f7;
+  --grey-modal-cart: #f1f1f1;
   --grey-icon-phone: #b7bfc8;
   --grey-checkbox-and-icon-hover: #b5b5b5;
   --grey-checkbox-and-icon: #c5c5c5;
@@ -2051,4 +2052,118 @@ ins::after {
 .feedback__link:focus, .developed__link:focus {
   text-decoration: none;
   color: var(--basic-red);
+}
+
+/* modal */
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.modal-cart {
+  width: 620px;
+  top: 150px;
+  bottom: auto;
+  background-color: var(--basic-white);
+  border-top: 7px solid var(--basic-red);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.modal-cart h3 {
+  position: relative;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  padding-left: 166px;
+  padding-right: 100px;
+  padding-top: 63px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+.modal-cart h3::before {
+  content: "";
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: var(--basic-green);
+  left: 120px;
+  background-image: url("../img/check-mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-cart .modal-close {
+  position: absolute;
+  border: none;
+  top: 10px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background-color: var(--basic-white);
+}
+
+.modal-cart .modal-close::before, .modal-cart .modal-close::after {
+  position: absolute;
+  content: "";
+  background-color: var(--basic-red);
+  top: 10px;
+  left: 1px;
+  right: 10px;
+  width: 19px;
+  height: 3px;
+  cursor: pointer;
+}
+
+.modal-cart .modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-cart .modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-cart-wrapper {
+  background-color: var(--grey-modal-cart);
+  padding-top: 37px;
+  padding-bottom: 37px;
+  padding-left: 113px;
+}
+
+.modal-cart-link-wrapper {
+  display: flex;
+}
+
+.modal-cart__link {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 192px;
+}
+
+.modal-cart__link--checkout {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  margin-right: 10px;
+}
+
+.modal-cart__link--continue {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
 }
