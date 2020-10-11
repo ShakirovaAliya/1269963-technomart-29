@@ -2063,15 +2063,142 @@ ins::after {
   bottom: 0;
   left: 0;
   margin: auto;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  background-color: var(--basic-white);
+  border-top: 7px solid var(--basic-red);
 }
+
+.modal-close {
+  position: absolute;
+  border: none;
+  top: 10px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.modal-close::before, .modal-close::after {
+  position: absolute;
+  content: "";
+  background-color: var(--basic-red);
+  top: 10px;
+  left: 1px;
+  right: 10px;
+  width: 19px;
+  height: 3px;
+  cursor: pointer;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+/* modal message */
+
+.modal-message {
+  width: 620px;
+  top: 100px;
+  bottom: auto;
+}
+
+.modal-message-form-wrapper {
+  padding-top: 39px;
+  padding-bottom:37px;
+  padding-left: 80px;
+  padding-right: 80px;
+  width: 460px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-message__item {
+  margin: 0px;
+}
+
+.modal-message__item label {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-message__item input {
+  width: 204px;
+  border: 2px solid var(--grey-del);
+  border-radius: 2px;
+  margin-bottom: 13px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+}
+
+.modal-message__item input::placeholder, .modal-message__item textarea::placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--grey-del);
+}
+
+.modal-message__item input[type="text"] {
+  margin-right: 15px;
+}
+
+.modal-message__item textarea {
+  width: 444px;
+  border: 2px solid var(--grey-del);
+  border-radius: 2px;
+  padding-top: 7px;
+  padding-left: 12px;
+  padding-bottom: 11px;
+}
+
+
+.modal-message-link-wrapper {
+  padding-top: 37px;
+  padding-bottom: 37px;
+  background-color: var(--grey-modal-cart);
+}
+
+.modal-message-link-wrapper button {
+  display: inline-block;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  width: 460px;
+  text-align: center;
+  border: none;
+  padding: 10px 0px;
+  margin-left: 80px;
+  background-color: var(--basic-red);
+}
+
+/* modal map */
+
+.modal-map {
+  display: none;
+  width: 943px;
+  height: 442px;
+  top: 100px;
+  bottom: auto;
+}
+
+
+/* modal cart */
 
 .modal-cart {
   width: 620px;
-  top: 150px;
+  top: 300px;
   bottom: auto;
-  background-color: var(--basic-white);
-  border-top: 7px solid var(--basic-red);
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .modal-cart h3 {
@@ -2101,37 +2228,6 @@ ins::after {
   background-image: url("../img/check-mark.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.modal-cart .modal-close {
-  position: absolute;
-  border: none;
-  top: 10px;
-  right: 10px;
-  width: 22px;
-  height: 22px;
-  cursor: pointer;
-  background-color: var(--basic-white);
-}
-
-.modal-cart .modal-close::before, .modal-cart .modal-close::after {
-  position: absolute;
-  content: "";
-  background-color: var(--basic-red);
-  top: 10px;
-  left: 1px;
-  right: 10px;
-  width: 19px;
-  height: 3px;
-  cursor: pointer;
-}
-
-.modal-cart .modal-close::before {
-  transform: rotate(45deg);
-}
-
-.modal-cart .modal-close::after {
-  transform: rotate(-45deg);
 }
 
 .modal-cart-wrapper {
