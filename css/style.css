@@ -2105,6 +2105,7 @@ ins::after {
   width: 620px;
   top: 100px;
   bottom: auto;
+  display: none;
 }
 
 .modal-message-form-wrapper {
@@ -2131,12 +2132,12 @@ ins::after {
 }
 
 .modal-message__item input {
-  width: 204px;
+  width: 202px;
   border: 2px solid var(--grey-del);
   border-radius: 2px;
   margin-bottom: 13px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   padding-left: 12px;
 }
 
@@ -2148,16 +2149,16 @@ ins::after {
 }
 
 .modal-message__item input[type="text"] {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .modal-message__item textarea {
-  width: 444px;
+  width: 442px;
   border: 2px solid var(--grey-del);
   border-radius: 2px;
   padding-top: 7px;
   padding-left: 12px;
-  padding-bottom: 11px;
+  padding-bottom: 13px;
 }
 
 
@@ -2187,11 +2188,14 @@ ins::after {
 .modal-map {
   display: none;
   width: 943px;
-  height: 442px;
   top: 100px;
+  height: 442px;
   bottom: auto;
 }
 
+.modal-map iframe {
+  border: none;
+}
 
 /* modal cart */
 
