@@ -43,7 +43,7 @@
     </div>
     <div class="header__info-wrapper container">
       <i class="info__text">Интернет-магазин строительных материалов <br>и инструментов для ремонта</i>
-      <div class="info__contacts-wrapper">
+      <div class="info__contacts-wrapper info__index-contacts">
         <a class="info__tel" href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a>
         <p class="info__address">г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
       </div>
@@ -70,7 +70,7 @@
       </ul>
     </nav>
   </header>
-  <main class="container">
+  <main>
     <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
       <section class="site-menu container">
         <h2 class="visually-hidden">Меню сайта</h2>
@@ -124,7 +124,7 @@
           </li>
         </ul>
     </section>
-    <section class="popular-products">
+    <section class="popular-products container">
       <div class="popular-products__heading-wrapper">
         <h2 class="popular-products__heading">Популярные товары</h2>
         <a class="popular-products__link button-link" href="catalog.html">Все популярные товары</a>
@@ -266,52 +266,51 @@
           Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными!
         </p>
-        <div class="services-list-wrapper">
-          <ul class="services__list">
-            <li class="services-list__item">
-              <input class="services__button services__button--delivery" type="radio" name="services_delivery" id="services-delivery" checked>
+        <div class="services-slider-wrapper">
+          <ul class="services-slider-controls">
+            <li class="services-slider-controls__item services-button-current">
+              <input class="services__button visually-hidden" type="radio" name="services" id="services-delivery">
               <label for="services-delivery">Доставка</label>
             </li>
-            <li class="services-list__item">
-              <input class="services__button services__button--guarantee" type="radio" name="services_guarantee" id="services-guarantee">
+            <li class="services-slider-controls__item">
+              <input class="services__button visually-hidden" type="radio" name="services" id="services-guarantee">
               <label for="services-guarantee">Гарантия</label>
             </li>
-            <li class="services-list__item">
-              <input class="services__button services__button--credit" type="radio" name="services_credit" id="services-credit">
+            <li class="services-slider-controls__item">
+              <input class="services__button visually-hidden" type="radio" name="services" id="services-credit">
               <label for="services-credit">Кредит</label>
             </li>
           </ul>
-          <div class="service__slider">
-            <div class="service-slide__wrapper service-slide__wrapper--delivery">
+          <ul class="services__list">
+            <li class="services-slider__item service-slide__item--delivery services-slide-current">
               <h3 class="service-slider__heading">Доставка</h3>
               <p class="service-slider__text">
-                Мы с удовольствием доставим ваш товар прямо
-                к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем,
+                Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!<br>
+                Ведь мы неплохо заработаем,<br>
                 Поднимая его на ваш этаж!
               </p>
-            </div>
-            <div class="service-slide__wrapper service-slide__wrapper--guarantee">
-              <h3 class="service-slider__heading">Гарантия</h3>
-              <p class="service-slider__text">
-                Если купленный у нас товар поломается или заискрит,
-                а также в случае пожара, спровоцированного его возгоранием,
-                вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-                сгоревший товар на новый.
-                Дом уж восстановите как-нибудь сами.
-              </p>
-            </div>
-            <div class="service-slide__wrapper service-slide__wrapper--credit">
-              <h3 class="service-slider__heading">Кредит</h3>
-              <p class="service-slider__text">
-                Залезть в долговую яму стало проще!
-                Кредитные консультанты придут вам на помощь.
-                <a class="services__link services__link--send-request" href="blank.html">Отправить заявку</a>
-              </p>
-            </div>
-          </div>
+            </li>
+            <li class="services-slider__item service-slide__item--guarantee">
+                <h3 class="service-slider__heading">Гарантия</h3>
+                <p class="service-slider__text">
+                  Если купленный у нас товар поломается или заискрит,<br>
+                  а также в случае пожара, спровоцированного его <br>возгоранием,
+                  вы всегда можете быть уверены в нашей <br>гарантии. Мы обменяем
+                  сгоревший товар на новый.<br>
+                  Дом уж восстановите как-нибудь сами.
+                </p>
+            </li>
+            <li class="services-slider__item service-slide__item--credit">
+                <h3 class="service-slider__heading">Кредит</h3>
+                <p class="service-slider__text">
+                  Залезть в долговую яму стало проще!<br>
+                  Кредитные консультанты придут вам на помощь.
+                </p>
+                <a class="services__link" href="blank.html">Отправить заявку</a>
+            </li>
+          </ul>
         </div>
-      </div>
     </section>
     <div class="about-company-wrapper container">
       <section class="about-company">
