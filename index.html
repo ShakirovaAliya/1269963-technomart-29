@@ -14,29 +14,32 @@
   <header class="main-header">
     <div class="header-wrapper">
       <div class="header__menu-wrapper container">
-        <a class="header__logo-link">
-          <img class="header__logo" src="img/logo-technomart-header.svg" width="108" height="18" alt="Лого Техномарт">
-        </a>
+        <div>
+          <a class="header__logo-link">
+            <img class="header__logo" src="img/logo-technomart-header.svg" width="108" height="18" alt="Лого Техномарт">
+          </a>
+        </div>
+        <div class="menu__item--search">
+          <label for="menu-item__search" class="visually-hidden">Поиск:</label>
+          <div class="search-input-wrapper">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="#ffffff"/>
+            </svg>
+            <input type="search" placeholder="Поиск:">
+          </div>
+        </div>
         <ul class="header-menu__list">
-          <li class="menu-list__item menu-list__item--search">
-            <label for="menu-item__search" class="visually-hidden">Поиск:</label>
-            <div class="search-input-wrapper">
-              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="#ffffff"/>
-              </svg>
-              <input type="search" placeholder="Поиск:">
-            </div>
-          </li>
           <li class="menu-list__item">
-            <a class="menu-item__link menu-item__link--marks" href="blank.html">Закладки:
+            <a class="menu-item__link menu-item__link--marks" href="blank.html">Закладки: 0
             </a>
           </li>
           <li class="menu-list__item">
-            <a class="menu-item__link menu-item__link--cart" href="blank.html">Корзина:
+            <a class="menu-item__link menu-item__link--cart" href="blank.html">Корзина: 0
             </a>
           </li>
           <li class="menu-list__item">
-            <a class="menu-item__link menu-item__link--checkout" href="blank.html">Оформить заказ</a>
+            <a class="menu-item__link menu-item__link--checkout" href="blank.html">Оформить заказ
+            </a>
           </li>
         </ul>
       </div>
@@ -76,13 +79,13 @@
         <h2 class="visually-hidden">Меню сайта</h2>
         <ul class="site-menu__list">
           <li class="site-menu__item site-menu__item--materials">Материалы
-            <a class="site-menu__link site-menu__link--materials link" href="blank.html">на любой вкус</a>
+            <a class="site-menu__link site-menu__link--materials" href="blank.html">на любой вкус</a>
           </li>
           <li class="site-menu__item site-menu__item--instrument">Инструмент
-            <a class="site-menu__link site-menu__link--instrument link" href="blank.html">на все случаи</a>
+            <a class="site-menu__link site-menu__link--instrument" href="blank.html">на все случаи</a>
           </li>
           <li class="site-menu__item site-menu__item--technics">Техника
-            <a class="site-menu__link site-menu__link--technics link" href="blank.html">для стройки</a>
+            <a class="site-menu__link site-menu__link--technics" href="blank.html">для стройки</a>
           </li>
           <li class="site-menu__slider">
               <ul class="slider__list">
@@ -117,17 +120,17 @@
               </div>
           </li>
           <li class="site-menu__item site-menu__item--discount">Скидки 50%
-            <a class="site-menu__link site-menu__link--discount link" href="blank.html">на 350 товаров</a>
+            <a class="site-menu__link site-menu__link--discount" href="blank.html">на 350 товаров</a>
           </li>
           <li class="site-menu__item site-menu__item--delivery">Доставка
-            <a class="site-menu__link site-menu__link--delivery link" href="blank.html">бесплатно</a>
+            <a class="site-menu__link site-menu__link--delivery" href="blank.html">бесплатно</a>
           </li>
         </ul>
     </section>
     <section class="popular-products container">
       <div class="popular-products__heading-wrapper">
         <h2 class="popular-products__heading">Популярные товары</h2>
-        <a class="popular-products__link button-link" href="catalog.html">Все популярные товары</a>
+        <a class="popular-products__link" href="catalog.html">Все популярные товары</a>
       </div>
       <ul class="popular-products__list">
         <li class="products__item">
@@ -149,7 +152,6 @@
             <del class="product-price">32500 Р.</del>
             <ins class="product-price">25500 Р.</ins>
           </article>
-
         </li>
         <li class="products__item">
           <article class="product__card">
@@ -215,7 +217,7 @@
     <section class="popular-brands container">
       <div class="popular-brands__heading-wrapper">
         <h2 class="popular-brands__heading">Популярные производители</h2>
-        <a class="popular-brands__link button-link" href="blank.html">Все производители</a>
+        <a class="popular-brands__link" href="blank.html">Все производители</a>
       </div>
       <ul class="popular-brands__list">
         <li class="brands__item">
@@ -339,7 +341,7 @@
             <li class="delivery-list__item">ЖелДорЭкпедиция</li>
           </ul>
         </div>
-        <a class="about-company__link button-link" href="blank.html">Подробнее о компании</a>
+        <a class="about-company__link" href="blank.html">Подробнее о компании</a>
       </section>
       <section class="contacts">
         <div class="contacts-content">
@@ -352,7 +354,7 @@
             <img class="contacts__map" src="../img/map.jpg" width="300" height="158" alt="Адрес магазина: г.Санкт-Петербург ул. Б. Конюшенная д.19/8">
           </a>
         </div>
-        <a class="contacts__link contacts__link--help button-link" href="blank.html">Заблудились? Напишите нам!</a>
+        <a class="contacts__link contacts__link--help" href="blank.html">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
