@@ -925,10 +925,11 @@ ins::after {
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.product__action:last-child {
+  margin-bottom: 0px;
 }
 
 .product__action--buy {
@@ -941,7 +942,6 @@ ins::after {
   padding-top: 13px;
   padding-bottom: 7px;
   border-bottom: 3px solid var(--green-border);
-  margin-bottom: 10px;
 }
 
 .product__action--buy::before {
@@ -979,6 +979,7 @@ ins::after {
 .product__action--add-to-bookmarks:focus {
   border: 3px solid var(--dark-blue);
   opacity: 0.5;
+  outline-color: var(--dark-blue);
 }
 
 /*  index popular-brands */
@@ -2156,6 +2157,7 @@ ins::after {
 
 .modal {
   position: fixed;
+  display: none;
   top: 0;
   right: 0;
   bottom: 0;
@@ -2175,6 +2177,10 @@ ins::after {
   height: 22px;
   cursor: pointer;
   background-color: transparent;
+}
+
+.modal-show {
+  display: block;
 }
 
 .modal-close::before, .modal-close::after {
@@ -2203,7 +2209,6 @@ ins::after {
   width: 620px;
   top: 100px;
   bottom: auto;
-  display: none;
 }
 
 .modal-message-form-wrapper {
@@ -2284,7 +2289,6 @@ ins::after {
 /* modal map */
 
 .modal-map {
-  display: none;
   width: 943px;
   top: 100px;
   height: 442px;
@@ -2298,7 +2302,6 @@ ins::after {
 /* modal cart */
 
 .modal-cart {
-  display: none;
   width: 620px;
   top: 300px;
   bottom: auto;

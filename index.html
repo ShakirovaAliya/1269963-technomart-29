@@ -470,6 +470,66 @@
     <button class="modal-close" type="button" aria-label="Закрыть">
     </button>
   </section>
+  <section class="modal modal-cart">
+    <h3>Товар добавлен в корзину!</h3>
+    <div class="modal-cart-wrapper">
+      <div class="modal-cart-link-wrapper">
+        <a class="modal-cart__link modal-cart__link--checkout" href="blank.html">
+          Оформить заказ
+        </a>
+        <a class="modal-cart__link modal-cart__link--continue" href="blank.html">
+          Продолжить покупки
+        </a>
+      </div>
+    </div>
+    <button class="modal-close" type="button" aria-label="Закрыть">
+    </button>
+  </section>
+
+  <script>
+    const writeUs = document.querySelector(".contacts__link--help");
+    const popupMessage = document.querySelector(".modal-message");
+    const form = popupMessage.querySelector("form");
+    const buttonClose = popupMessage.querySelector(".modal-close");
+    const client = popupMessage.querySelector("[name=client]");
+    const messageMail = popupMessage.querySelector("[name=message-email]");
+    const messageText = popupMessage.querySelector("[name=message-text]");
+
+    writeUs.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      popupMessage.classList.add("modal-show");
+      client.focus();
+    });
+
+    buttonClose.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      popupMessage.classList.remove("modal-show");
+    });
+
+    form.addEventListener("submit", function(evt) {
+      if(!client.value || !messageMail.value || !messageText.value) {
+        evt.preventDefault();
+        console.log("Нужно ввести имя, email, текст обращения")
+      }
+    })
+  </script>
+
+  <script>
+    const map = document.querySelector(".contacts__link--map");
+    const popupMap = document.querySelector(".modal-map");
+    const buttonCloseMap = popupMap.querySelector(".modal-close");
+
+    map.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popupMap.classList.add("modal-show");
+  });
+
+    buttonCloseMap.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popupMap.classList.remove("modal-show");
+  });
+</script>
+
 </body>
 
 </html>
