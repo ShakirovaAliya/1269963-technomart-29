@@ -1136,6 +1136,7 @@ ins::after {
 }
 
 .services-slider-controls__item {
+  cursor: pointer;
   font-size: 21px;
   line-height: 30px;
   font-weight: var(--font-weight-more);
