@@ -649,10 +649,6 @@ input[type="search"]::-webkit-search-results-decoration {
   display: block;
 }
 
-.slider-controls .current {
-  background-color: #ffffff;
-}
-
 .slider__list {
   margin: 0;
   padding: 0;
@@ -721,12 +717,12 @@ input[type="search"]::-webkit-search-results-decoration {
   top: 220px;
 }
 
-.slider-controls button {
+.slider-control {
   padding: 0;
   width: 10px;
   height: 10px;
   background-color: var(--basic-red);
-  border: 2px solid #ffffff;
+  border: 2px solid var(--basic-white);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -1366,7 +1362,7 @@ ins::after {
   margin-bottom: 32px;
 }
 
-.contacts__map {
+.contacts__link--map {
   margin-bottom: 30px;
 }
 
@@ -2300,6 +2296,25 @@ ins::after {
   background-color: var(--basic-red);
 }
 
+.modal-message-link-wrapper button:hover {
+  background-color: var(--darker-red);
+}
+
+.modal-message-link-wrapper button:focus {
+  background-color: var(--dark-red);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px);}
+  20%, 40%, 60%, 80% { transform: translateX(10px);}
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
 /* modal map */
 
 .modal-map {
@@ -2383,3 +2398,4 @@ ins::after {
   background-color: var(--basic-white);
   color: var(--basic-black);
 }
+

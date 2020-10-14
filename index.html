@@ -94,7 +94,7 @@
         <ul class="site-menu__list-column">
           <li class="site-menu__slider">
             <ul class="slider__list">
-              <li class="slider__item slide slide-current">
+              <li class="slider__item slide first-slide slide-current">
                 <h3 class="slide__title">
                   Перфораторы
                 </h3>
@@ -104,7 +104,7 @@
                   Открыть каталог
                 </a>
               </li>
-              <li class="slider__item slide">
+              <li class="slider__item second-slide slide">
                 <h3 class="slide__title">
                   Дрели
                 </h3>
@@ -120,8 +120,8 @@
               <button class="forward" type="button" aria-label="Вперед"></button>
             </div>
             <div class="slider-controls">
-              <button class="current"  type="button" aria-label="Первый слайд"></button>
-              <button type="button" aria-label="Второй слайд"></button>
+              <button class="slider-control first-control"  type="button" aria-label="Первый слайд"></button>
+              <button class="slider-control second-control" type="button" aria-label="Второй слайд"></button>
             </div>
           </li>
           <li class="site-menu__item column-item site-menu__item--discount">
@@ -286,15 +286,15 @@
         </p>
         <div class="services-slider-wrapper">
           <ul class="services-slider-controls">
-            <li class="services-slider-controls__item services-button-current">
+            <li class="services-slider-controls__item  services-button-delivery services-button-current">
               <input class="services__button visually-hidden" type="radio" name="services" id="services-delivery">
               <label for="services-delivery">Доставка</label>
             </li>
-            <li class="services-slider-controls__item">
+            <li class="services-slider-controls__item services-button-guarantee">
               <input class="services__button visually-hidden" type="radio" name="services" id="services-guarantee">
               <label for="services-guarantee">Гарантия</label>
             </li>
-            <li class="services-slider-controls__item">
+            <li class="services-slider-controls__item services-button-credit">
               <input class="services__button visually-hidden" type="radio" name="services" id="services-credit">
               <label for="services-credit">Кредит</label>
             </li>
@@ -488,74 +488,12 @@
     </button>
   </section>
 
-  <script>
-    const writeUs = document.querySelector(".contacts__link--help");
-    const popupMessage = document.querySelector(".modal-message");
-    const form = popupMessage.querySelector("form");
-    const buttonClose = popupMessage.querySelector(".modal-close");
-    const client = popupMessage.querySelector("[name=client]");
-    const messageMail = popupMessage.querySelector("[name=message-email]");
-    const messageText = popupMessage.querySelector("[name=message-text]");
+  <script src="js/slider-menu.js"></script>
+  <script src="js/slider-services.js"></script>
+  <script src="js/popupCart.js"></script>
+  <script src="js/popupMap.js"></script>
+  <script src="js/popupMessage.js"></script>
 
-    writeUs.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      popupMessage.classList.add("modal-show");
-      client.focus();
-    });
-
-    buttonClose.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      popupMessage.classList.remove("modal-show");
-    });
-
-    form.addEventListener("submit", function(evt) {
-      if(!client.value || !messageMail.value || !messageText.value) {
-        evt.preventDefault();
-        console.log("Нужно ввести имя, email, текст обращения")
-      }
-    })
-  </script>
-
-  <script>
-    const map = document.querySelector(".contacts__link--map");
-    const popupMap = document.querySelector(".modal-map");
-    const buttonCloseMap = popupMap.querySelector(".modal-close");
-
-    map.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    popupMap.classList.add("modal-show");
-  });
-
-    buttonCloseMap.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    popupMap.classList.remove("modal-show");
-  });
-</script>
-
-<script>
-  const buy = document.querySelectorAll(".product__action--buy");
-  const mark = document.querySelectorAll(".product__action--add-to-bookmarks");
-  const popupCart = document.querySelector(".modal-cart");
-  const productNumber = 100;
-  const buttonCloseCart = popupCart.querySelector(".modal-close");
-  const cart = document.querySelector(".menu-item__link--cart");
-  const bookmark = document.querySelector(".menu-item__link--marks");
-  for (i=0; i<=productNumber; i++) {
-    buy[i].addEventListener("click", function(evt) {
-    evt.preventDefault();
-    popupCart.classList.add("modal-show");
-    cart.style.backgroundColor = "#ee3643";
-  })
-    mark[i].addEventListener("click", function(evt) {
-    evt.preventDefault();
-    bookmark.style.backgroundColor = "#ee3643";
-  })
-  buttonCloseCart.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    popupCart.classList.remove("modal-show");
-  })
-  }
-</script>
 
 </body>
 
