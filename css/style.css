@@ -95,6 +95,8 @@ img {
 
 .container {
   width: 940px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 0 auto;
 }
 
@@ -377,7 +379,7 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: var(--darker-blue);
 }
 
-.nav-item__link:focus {
+.nav-item__link:focus, .nav-item__link:active {
   opacity: 0.5;
   background-color: var(--focus-blue);
 }
@@ -1389,17 +1391,19 @@ ins::after {
 
 /* catalog page */
 
+.catalog-page__heading-wrapper  {
+
+  margin-bottom: 20px;
+}
+
 .catalog-page__heading {
-  margin: 0 auto;
-  width: 890px;
-  padding: 25px;
-  background-color: var(--ligh-grey-catalog);
   font-size: 30px;
   line-height: 30px;
   font-weight: var(--font-weight);
   color: var(--dark-blue);
-  margin-bottom: 20px;
   text-transform: uppercase;
+  padding: 29px;
+  background-color: var(--ligh-grey-catalog);
 }
 
 .catalog-page-wrapper {

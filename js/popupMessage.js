@@ -1,10 +1,10 @@
     const writeUs = document.querySelector(".contacts__link--help");
-    const popupMessage = document.querySelector(".modal-message");
-    const form = popupMessage.querySelector("form");
-    const buttonClose = popupMessage.querySelector(".modal-close");
-    const client = popupMessage.querySelector("[name=client]");
-    const messageMail = popupMessage.querySelector("[name=message-email]");
-    const messageText = popupMessage.querySelector("[name=message-text]");
+    const messagePopup = document.querySelector(".modal-message");
+    const form = messagePopup.querySelector("form");
+    const buttonClose = messagePopup.querySelector(".modal-close");
+    const client = messagePopup.querySelector("[name=client]");
+    const messageMail = messagePopup.querySelector("[name=message-email]");
+    const messageText = messagePopup.querySelector("[name=message-text]");
     let clientStorage = "";
     let messageStorage = "";
     let isStorageSupport = true;
@@ -18,7 +18,7 @@
 
     writeUs.addEventListener("click", function(evt) {
       evt.preventDefault();
-      popupMessage.classList.add("modal-show");
+      messagePopup.classList.add("modal-show");
       if(clientStorage) {
         client.value = clientStorage;
         messageMail.focus();
@@ -33,7 +33,7 @@
     form.addEventListener("submit", function(evt) {
       if(!client.value || !messageMail.value || !messageText.value) {
         evt.preventDefault();
-        popupMessage.classList.add("modal-error");
+        messagePopup.classList.add("modal-error");
       } else {
         if(isStorageSupport) {
           localStorage.setItem("client", client.value);
@@ -44,15 +44,15 @@
 
     buttonClose.addEventListener("click", function(evt) {
       evt.preventDefault();
-      popupMessage.classList.remove("modal-show");
-      popupMessage.classList.remove("modal-error");
+      messagePopup.classList.remove("modal-show");
+      messagePopup.classList.remove("modal-error");
     });
 
     window.addEventListener("keydown", function(evt) {
       if(evt.keyCode === 27) {
-        if(popupMessage.classList.contains("modal-show")) {
+        if(messagePopup.classList.contains("modal-show")) {
           evt.preventDefault();
-          popupMessage.classList.remove("modal-show");
+          messagePopup.classList.remove("modal-show");
         }
       }
     })
