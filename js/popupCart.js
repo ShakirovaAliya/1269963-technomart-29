@@ -1,4 +1,5 @@
-  let productList = document.querySelector(".popular-products__list")
+  let productList = document.querySelector(".popular-products__list");
+  let catalogProductList = document.querySelector(".catalog-products__list");
   let buy = document.querySelectorAll(".product__action--buy");
   let mark = document.querySelectorAll(".product__action--add-to-bookmarks");
   const сartPopup = document.querySelector(".modal-cart");
@@ -10,9 +11,12 @@
 
   productList.onclick = function(evt) {
     let target = evt.target;
-    if(target.className != "product__action--buy") return;
+    if(target.classList.contains("product__action--buy")) {
       сartPopup.classList.add("modal-show");
       cart.style.backgroundColor = "#ee3643";
+    } else if(target.classList.contains("product__action--add-to-bookmarks")) {
+      bookmark.style.backgroundColor = "#ee3643";
+    };
   };
 
   buttonCloseCart.addEventListener("click", function(evt) {
