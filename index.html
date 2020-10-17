@@ -116,8 +116,8 @@
               </li>
             </ul>
             <div class="slider-arrows">
-              <button class="back" type="button" aria-label="Назад"></button>
-              <button class="forward" type="button" aria-label="Вперед"></button>
+              <a class="back" aria-label="Назад"></a>
+              <a class="forward" aria-label="Вперед"></a>
             </div>
             <div class="slider-controls">
               <button class="slider-control first-control"  type="button" aria-label="Первый слайд"></button>
@@ -286,15 +286,15 @@
         </p>
         <div class="services-slider-wrapper">
           <ul class="services-slider-controls">
-            <li class="services-slider-controls__item  services-button-delivery services-button-current">
+            <li class="services-slider-controls__item  services-button-delivery services-button-current" tabindex="0">
               <input class="services__button visually-hidden" type="radio" name="services" id="services-delivery">
-              <label for="services-delivery">Доставка</label>
+              <label for="services-delivery" >Доставка</label>
             </li>
-            <li class="services-slider-controls__item services-button-guarantee">
+            <li class="services-slider-controls__item services-button-guarantee" tabindex="0">
               <input class="services__button visually-hidden" type="radio" name="services" id="services-guarantee">
               <label for="services-guarantee">Гарантия</label>
             </li>
-            <li class="services-slider-controls__item services-button-credit">
+            <li class="services-slider-controls__item services-button-credit" tabindex="0">
               <input class="services__button visually-hidden" type="radio" name="services" id="services-credit">
               <label for="services-credit">Кредит</label>
             </li>
@@ -369,7 +369,7 @@
     <section class="main-footer__content">
       <h2 class="visually-hidden">Навигация</h2>
       <div class="footer-nav__wrapper container">
-        <a class="footer__logo-link" href="index.html">
+        <a class="footer__logo-link">
           <img class="footer__logo" src="img/logo-technomart-footer.svg" width="136" height="21" alt="Лого Техномарт">
         </a>
         <ul class="footer-nav">
@@ -491,7 +491,6 @@
   <script src="js/slider-menu.js"></script>
   <script src="js/slider-services.js"></script>
   <script src="js/popupCart.js"></script>
-  <script src="js/counter.js"></script>
   <script src="js/popupMap.js"></script>
   <script src="js/popupMessage.js"></script>
 
