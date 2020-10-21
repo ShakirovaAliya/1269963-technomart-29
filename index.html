@@ -61,8 +61,8 @@
         <a class="account__link account__link--registration" href="blank.html">Регистрация</a>
       </div>
     </div>
-    <nav class="header__nav container">
-      <ul class="nav__list">
+    <nav class="header__nav">
+      <ul class="nav__list container">
         <li class="nav__item"><a class="nav-item__link nav-item__link--home">Главная</a></li>
         <li class="nav__item"><a class="nav-item__link nav-item__link--company" href="blank.html">Компания</a></li>
         <li class="nav__item"><a class="nav-item__link nav-item__link--catalog" href="catalog.html">Каталог</a></li>
@@ -91,52 +91,56 @@
             <a class="site-menu__link site-menu__link--technics" href="blank.html">для стройки</a>
           </li>
         </ul>
-        <ul class="site-menu__list-column">
-          <li class="site-menu__slider">
-            <ul class="slider__list">
-              <li class="slider__item slide first-slide slide-current">
-                <h3 class="slide__title">
-                  Перфораторы
-                </h3>
-                <p class="slide__text">Настоящие мужские игрушки</p>
-                <img class="slide__photo" src="img/perforator-slide.jpg" width="620" height="266" alt="Перфоратор Bosch">
-                <a class="slide-link" href="catalog.html">
-                  Открыть каталог
-                </a>
-              </li>
-              <li class="slider__item second-slide slide">
-                <h3 class="slide__title">
-                  Дрели
-                </h3>
-                <p class="slide__text">Соседям на радость!</p>
-                <img class="slide__photo" src="img/drill-slide.jpg" width="620" height="266" alt="Дрель Bosch">
-                <a class="slide-link" href="catalog.html">
-                  Открыть каталог
-                </a>
-              </li>
-            </ul>
-            <div class="slider-arrows">
-              <a class="back" aria-label="Назад"></a>
-              <a class="forward" aria-label="Вперед"></a>
-            </div>
-            <div class="slider-controls">
-              <button class="slider-control first-control"  type="button" aria-label="Первый слайд"></button>
-              <button class="slider-control second-control" type="button" aria-label="Второй слайд"></button>
-            </div>
-          </li>
-          <li class="site-menu__item column-item site-menu__item--discount">
-            <h3>Скидки 50%</h3>
-            <a class="site-menu__link site-menu__link--discount" href="blank.html">на 350 товаров</a>
-          </li>
-          <li class="site-menu__item column-item site-menu__item--delivery">
-            <h3>Доставка</h3>
-            <a class="site-menu__link site-menu__link--delivery" href="blank.html">бесплатно</a>
-          </li>
-       </ul>
+        <div class="site-menu-list-wrapper">
+          <ul class="site-menu__list site-menu__list--slider">
+            <li class="site-menu__slider">
+              <ul class="slider__list">
+                <li class="slider__item slide first-slide slide-current">
+                  <h3 class="slide__title">
+                    Перфораторы
+                  </h3>
+                  <p class="slide__text">Настоящие мужские игрушки</p>
+                  <img class="slide__photo" src="img/perforator-slide.jpg" width="620" height="266" alt="Перфоратор Bosch">
+                  <a class="slide-link" href="catalog.html">
+                    Открыть каталог
+                  </a>
+                </li>
+                <li class="slider__item second-slide slide">
+                  <h3 class="slide__title">
+                    Дрели
+                  </h3>
+                  <p class="slide__text">Соседям на радость!</p>
+                  <img class="slide__photo" src="img/drill-slide.jpg" width="620" height="266" alt="Дрель Bosch">
+                  <a class="slide-link" href="catalog.html">
+                   Открыть каталог
+                  </a>
+               </li>
+              </ul>
+              <div class="slider-arrows">
+                <a class="back" aria-label="Назад"></a>
+                <a class="forward" aria-label="Вперед"></a>
+              </div>
+              <div class="slider-controls">
+                <button class="slider-control first-control"  type="button" aria-label="Первый слайд"></button>
+                <button class="slider-control second-control" type="button" aria-label="Второй слайд"></button>
+              </div>
+            </li>
+          </ul>
+          <ul class="site-menu__list site-menu__list--column">
+            <li class="site-menu__item site-menu__item--discount">
+              <h3>Скидки 50%</h3>
+              <a class="site-menu__link site-menu__link--discount" href="blank.html">на 350 товаров</a>
+            </li>
+            <li class="site-menu__item site-menu__item--delivery">
+              <h3>Доставка</h3>
+              <a class="site-menu__link site-menu__link--delivery" href="blank.html">бесплатно</a>
+            </li>
+          </ul>
+        </div>
     </section>
     <section class="popular-products container">
       <div class="popular-products__heading-wrapper">
-        <h2 class="popular-products__heading">Популярные товары</h2>
+        <h2 class="popular-products__heading">Популярные товары:</h2>
         <a class="popular-products__link" href="catalog.html">Все популярные товары</a>
       </div>
       <ul class="popular-products__list product-list">
@@ -151,13 +155,15 @@
                 <button class="product__action product__action--add-to-bookmarks" aria-label="Добавить Перфоратор BOSCH BFG 9000 в закладки">В закладки</button>
               </div>
             </div>
-            <h3 class="product__name">
-              <a href="catalog.html">
-                Перфоратор BOSCH BFG 9000
-              </a>
-            </h3>
-            <del class="product-price">32500 Р.</del>
-            <ins class="product-price">25500 Р.</ins>
+            <div class="product-info">
+              <h3 class="product__name">
+                <a href="catalog.html">
+                  Перфоратор BOSCH BFG 9000
+                </a>
+              </h3>
+              <del class="product-price">32500 Р.</del>
+              <ins class="product-price">25500 Р.</ins>
+            </div>
           </article>
         </li>
         <li class="products__item">
@@ -171,13 +177,15 @@
                 <button class="product__action product__action--add-to-bookmarks" aria-label="Добавить Перфоратор BOSCH BFG 3000 в закладки">В закладки</button>
               </div>
             </div>
-            <h3 class="product__name">
-              <a href="catalog.html">
-                Перфоратор BOSCH BFG 3000
-              </a>
-            </h3>
-            <del class="product-price">22500 Р.</del>
-            <ins class="product-price">15500 Р.</ins>
+            <div class="product-info">
+              <h3 class="product__name">
+                <a href="catalog.html">
+                  Перфоратор BOSCH BFG 3000
+                </a>
+              </h3>
+              <del class="product-price">22500 Р.</del>
+              <ins class="product-price">15500 Р.</ins>
+            </div>
           </article>
         </li>
         <li class="products__item">
@@ -191,13 +199,15 @@
                 <button class="product__action product__action--add-to-bookmarks" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</button>
               </div>
             </div>
-            <h3 class="product__name">
-              <a href="catalog.html">
-                Перфоратор BOSCH BFG 6000
-              </a>
-            </h3>
-            <del class="product-price">30500 Р.</del>
-            <ins class="product-price">25500 Р.</ins>
+            <div class="product-info">
+              <h3 class="product__name">
+                <a href="catalog.html">
+                  Перфоратор BOSCH BFG 6000
+                </a>
+              </h3>
+              <del class="product-price">30500 Р.</del>
+              <ins class="product-price">25500 Р.</ins>
+            </div>
           </article>
         </li>
         <li class="products__item products__item--without-del">
@@ -211,19 +221,21 @@
                 <button class="product__action product__action--add-to-bookmarks" aria-label="Добавить Перфоратор BOSCH BFG 2000 в закладки">В закладки</button>
               </div>
             </div>
-            <h3 class="product__name">
-              <a href="catalog.html">
-                Перфоратор BOSCH BFG 2000
-              </a>
-            </h3>
-            <ins class="product-price">12500 Р.</ins>
+            <div class="product-info">
+              <h3 class="product__name">
+                <a href="catalog.html">
+                  Перфоратор BOSCH BFG 2000
+                </a>
+              </h3>
+              <ins class="product-price">12500 Р.</ins>
+            </div>
           </article>
         </li>
       </ul>
     </section>
     <section class="popular-brands container">
       <div class="popular-brands__heading-wrapper">
-        <h2 class="popular-brands__heading">Популярные производители</h2>
+        <h2 class="popular-brands__heading">Популярные производители:</h2>
         <a class="popular-brands__link" href="blank.html">Все производители</a>
       </div>
       <ul class="popular-brands__list">
@@ -407,7 +419,7 @@
         <div class="copy__text-wrapper">
           <p class="copy__text">
           &copy;
-          2010-2019 Компания "Техномарт"
+          2010-2019 Компания «Техномарт»
           Все права защищены
           </p>
         </div>
