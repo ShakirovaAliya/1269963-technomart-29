@@ -708,29 +708,38 @@ input[type="search"]::-webkit-search-results-decoration {
   list-style: none;
 }
 
-.slide__title {
+.slide-title-wrapper {
   position: absolute;
   z-index: 1;
-  top: 23px;
-  left: 24px;
+  width: 620px;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.slide__title {
+  z-index: 1;
   font-size: 36px;
+  padding-top: 23px;
+  padding-left: 24px;
   font-weight: var(--font-weight-more);
   line-height: 36px;
   text-transform: uppercase;
   margin-top: 0px;
+  margin-bottom: 0px;
   color: var(--basic-white);
 }
 
 .slide__text {
-  position: absolute;
-  z-index: 20;
+  padding-top: 23px;
+  padding-left: 24px;
   color: var(--basic-white);
   font-size: 18px;
   font-weight: var(--font-weight);
   line-height: 24px;
-  left: 24px;
-  top: 64px;
   margin-top: 0px;
+  margin-bottom: 15px;
+  padding-top: 6px;
   z-index: 1;
 }
 
