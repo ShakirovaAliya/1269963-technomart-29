@@ -1079,6 +1079,7 @@ ins {
 
 .product__action {
   display: inline-block;
+  vertical-align: middle;
   border: none;
   font-size: 14px;
   line-height: 18px;
@@ -2506,8 +2507,8 @@ ins {
 .modal-close {
   position: absolute;
   border: none;
-  top: 10px;
-  right: 10px;
+  top: 13px;
+  right: 13px;
   width: 22px;
   height: 22px;
   cursor: pointer;
@@ -2525,7 +2526,7 @@ ins {
   top: 10px;
   left: 1px;
   right: 10px;
-  width: 19px;
+  width: 25px;
   height: 3px;
   cursor: pointer;
 }
@@ -2547,8 +2548,8 @@ ins {
 }
 
 .modal-message-form-wrapper {
-  padding-top: 39px;
-  padding-bottom:37px;
+  padding-top: 40px;
+  padding-bottom: 33px;
   padding-left: 80px;
   padding-right: 80px;
   width: 460px;
@@ -2573,10 +2574,10 @@ ins {
   width: 202px;
   border: 2px solid var(--grey-del);
   border-radius: 2px;
-  margin-bottom: 13px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 12px;
+  margin-bottom: 14px;
+  padding-top: 7px;
+  padding-bottom: 9px;
+  padding-left: 11px;
 }
 
 .modal-message__item input::placeholder, .modal-message__item textarea::placeholder {
@@ -2587,27 +2588,28 @@ ins {
 }
 
 .modal-message__item input[type="text"] {
-  margin-right: 20px;
+  margin-right: 21px;
 }
 
 .modal-message__item textarea {
-  width: 442px;
+  width: 443px;
   border: 2px solid var(--grey-del);
   border-radius: 2px;
-  padding-top: 7px;
-  padding-left: 12px;
-  padding-bottom: 13px;
+  padding-top: 4px;
+  padding-left: 10px;
+  padding-bottom: 16px;
 }
 
 
 .modal-message-link-wrapper {
-  padding-top: 37px;
-  padding-bottom: 37px;
+  padding-top: 38px;
+  padding-bottom: 36px;
   background-color: var(--grey-modal-cart);
 }
 
 .modal-message-link-wrapper button {
   display: inline-block;
+  vertical-align: middle;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -2653,6 +2655,12 @@ ins {
   border: none;
 }
 
+.modal-map .modal-close::before, .modal-map .modal-close::after {
+  top: 6px;
+  left: 2px;
+}
+
+
 /* modal cart */
 
 .modal-cart {
@@ -2667,10 +2675,10 @@ ins {
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
-  padding-left: 166px;
+  padding-left: 99px;
   padding-right: 100px;
-  padding-top: 63px;
-  padding-bottom: 70px;
+  padding-top: 67px;
+  padding-bottom: 66px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2684,10 +2692,11 @@ ins {
   height: 66px;
   border-radius: 50%;
   background-color: var(--basic-green);
-  left: 120px;
+  left: 80px;
+  top: 49px;
   background-image: url("../img/check-mark.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 55% 50%;
 }
 
 .modal-cart-wrapper {
@@ -2703,8 +2712,9 @@ ins {
 
 .modal-cart__link {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  padding-left: 2px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -2722,5 +2732,9 @@ ins {
 .modal-cart__link--continue {
   background-color: var(--basic-white);
   color: var(--basic-black);
+  padding-left: 0px;
 }
 
+.modal-cart .modal-close::before, .modal-cart .modal-close::after {
+  top: 7px;
+}
