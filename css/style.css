@@ -1716,10 +1716,6 @@ ins {
 
 /* catalog page */
 
-.catalog-page__heading-wrapper  {
-
-}
-
 .catalog-page__heading {
   font-size: 30px;
   margin-top: 20px;
@@ -1893,31 +1889,30 @@ ins {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   margin-right: 14px;
   width: 43px;
 }
 
-.sorting-button-up, .sorting-button-down {
-  display: block;
-  width: 0px;
-  height: 0px;
-  border: 10px solid transparent;
-  border-bottom: 10px solid var(--grey-checkbox-and-icon);
+.sorting__buttons path {
+  fill: var(--grey-checkbox-and-icon);
 }
 
-.sorting-button-down {
+.sorting-button-down svg {
   transform: rotate(180deg);
-  margin-top: 10px;
 }
 
-.sorting-button-up:hover, .sorting-button-down:hover {
-  border-bottom: 10px solid var(--basic-black);
+.sorting-button-up:hover path, .sorting-button-down:hover path {
+  fill: var(--basic-black);
 }
 
-.sorting-button-up:active, .sorting-button-down:active,
-.sorting-button-up:focus, .sorting-button-down:focus {
-  border-bottom: 10px solid var(--basic-red);
+.sorting-button-up:active path,
+.sorting-button-up:focus path,
+.sorting-button-down:active path,
+.sorting-button-down:focus path {
+  fill: var(--basic-red);
 }
+
 
 /* catalog filter */
 
