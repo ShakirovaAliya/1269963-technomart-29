@@ -148,6 +148,10 @@ img {
   width: 450px;
 }
 
+.menu-list__item {
+
+}
+
 .menu-item__link {
   display: block;
   padding-top: 10px;
@@ -156,13 +160,11 @@ img {
   line-height: 24px;
   font-weight: var(--font-weight);
   color: var(--basic-white);
-  text-align: center;
 }
 
 .menu__item--search {
   margin-left: 220px;
 }
-
 
 input[type="search"] {
   position: relative;
@@ -230,13 +232,13 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .menu-item__link--marks {
-  padding-left: 43px;
-  padding-right: 38px;
+  padding-left: 44px;
+  width: 120px;
 }
 
 .menu-item__link--cart {
   padding-left: 35px;
-  padding-right: 27px;
+  width: 101px;
 }
 
 .menu-item__link--marks::before {

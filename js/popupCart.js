@@ -1,13 +1,8 @@
   let productList = document.querySelector(".product-list");
-
-  let catalogProductList = document.querySelector(".catalog-products__list");
-  let buy = document.querySelectorAll(".product__action--buy");
-  let mark = document.querySelectorAll(".product__action--add-to-bookmarks");
   const сartPopup = document.querySelector(".modal-cart");
-  const productNumber = 100;
-  const buttonCloseCart = сartPopup.querySelector(".modal-close");
   let cart = document.querySelector(".menu-item__link--cart");
   let bookmark = document.querySelector(".menu-item__link--marks");
+  const buttonCloseCart = сartPopup.querySelector(".modal-close");
 
 
   productList.addEventListener("click", function(evt) {
