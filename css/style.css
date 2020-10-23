@@ -391,7 +391,7 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: var(--darker-blue);
 }
 
-.nav-item__link:focus, .nav-item__link:active {
+.nav-item__link:focus, .nav-item__link:active, .current-page {
   opacity: 0.5;
   background-color: var(--focus-blue);
 }
@@ -1868,9 +1868,10 @@ ins {
   text-decoration-color: var(--basic-red);
 }
 
-.sorting__link:focus {
+.sorting__link:focus, .sorting__link:active, .current-sorting-link {
   color: var(--basic-red);
   text-decoration: none;
+  opacity: 1;
 }
 
 .sorting__buttons {
@@ -1900,7 +1901,7 @@ ins {
 .sorting-button-up:active path,
 .sorting-button-up:focus path,
 .sorting-button-down:active path,
-.sorting-button-down:focus path {
+.sorting-button-down:focus path, .current-sorting-button path {
   fill: var(--basic-red);
 }
 
@@ -2206,7 +2207,7 @@ ins {
   border: 1px solid var(--basic-red);
 }
 
-.pagination__item a:active {
+.pagination__item a:active, .current-page-number a {
   background-color: var(--basic-red);
   color: var(--basic-white);
 }
