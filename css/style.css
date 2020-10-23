@@ -1155,7 +1155,7 @@ ins {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  gap: 18px;
   margin-bottom: 48px;
 }
 
@@ -1247,6 +1247,11 @@ ins {
   padding-left: 27px;
 }
 
+.catalog-products__item:nth-child(4) .product__actions-wrapper,
+.catalog-products__item:nth-child(7) .product__actions-wrapper {
+  padding-bottom: 23px;
+}
+
 .catalog-products__item:nth-child(6) .catalog-product__photo,
 .catalog-products__item:nth-child(9) .catalog-product__photo {
   margin-top: 29px;
@@ -1258,6 +1263,11 @@ ins {
   margin-top: 34px;
   margin-bottom: 36px;
   padding-left: 27px;
+}
+
+.catalog-products__item:nth-child(6) .product__actions-wrapper,
+.catalog-products__item:nth-child(9) .product__actions-wrapper {
+  padding-bottom: 23px;
 }
 
 /*  index popular-brands */
@@ -1525,7 +1535,9 @@ ins {
 
 .about-products {
   background-color: var(--grey-services);
-  padding: 65px 0px;
+  padding-top: 40px;
+  padding-bottom: 55px;
+
 }
 
 .about-products__heading {
@@ -2176,7 +2188,7 @@ ins {
 }
 
 .pagination__item {
-  margin-right: 10px;
+  margin-right: 11px;
 }
 
 .pagination__item:last-child {
@@ -2193,7 +2205,11 @@ ins {
   text-transform: uppercase;
   border: 1px solid var(--grey-button-border);
   text-align: center;
-  padding: 10px 15px;
+  padding: 9px 14px;
+}
+
+.pagination__item:last-child a {
+  padding: 9px 30px;
 }
 
 .pagination__item a:hover {
@@ -2218,12 +2234,17 @@ ins {
   padding-bottom: 54px;
 }
 
+.catalog-main-footer__content {
+  padding-bottom: 53px;
+}
+
 .footer-nav__wrapper {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 8px;
 }
+
 
 .footer__logo-link {
   display: block;
@@ -2286,6 +2307,11 @@ ins {
   padding-left: 3px;
 }
 
+.catalog-footer__address-wrapper {
+  margin-right: 94px;
+  padding-left: 3px;
+}
+
 .footer__address, .footer__link--tel {
   font-size: 18px;
   line-height: 21px;
@@ -2295,6 +2321,11 @@ ins {
 
 .footer__address {
   margin-bottom: 0px;
+}
+
+.catalog-footer__address {
+  margin-top: 16px;
+  margin-bottom: 2px;
 }
 
 .footer__link--tel {
@@ -2334,6 +2365,14 @@ ins {
 
 .footer-menu__item:nth-child(4n) {
   margin-right: 0px;
+}
+
+.catalog-footer-menu__item {
+  margin-right: 59px;
+}
+
+.catalog-footer-menu__item:nth-child(3)  {
+  margin-right: 56px;
 }
 
 .footer-nav__link:hover, .footer-menu__link:hover, .feedback__link:hover, .developed__link:hover {
