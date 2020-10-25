@@ -1709,7 +1709,8 @@ ins {
   margin-bottom: 29px;
 }
 
-.contacts__link-big-map {
+.contacts__link--map {
+  cursor: pointer;
 }
 
 .contacts__big-map {
@@ -1719,10 +1720,45 @@ ins {
   left: 0px;
   right: 160px;
   border-top: 7px solid var(--basic-red);
+}
+
+.contacts__link--map:focus .contacts__big-map, .contacts__link--map:active .contacts__big-map  {
+  display: block;
+}
+
+.modal-close-map {
+  display: none;
+  position: absolute;
+  border: none;
+  width: 22px;
+  height: 22px;
+  top: 25px;
+  right: 13px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.modal-close-map::before, .modal-close-map::after {
+  position: absolute;
+  content: "";
+  background-color: var(--basic-red);
+  width: 25px;
+  height: 3px;
+  top: 10px;
+  left: 1px;
+  right: 10px;
   cursor: pointer;
 }
 
-.contacts__map:focus .contacts__big-map {
+.modal-close-map::before {
+  transform: rotate(45deg);
+}
+
+.modal-close-map::after {
+  transform: rotate(-45deg);
+}
+
+.contacts__link--map:focus .modal-close-map, .contacts__link--map:active .modal-close-map {
   display: block;
 }
 
@@ -2541,6 +2577,10 @@ ins {
   z-index: 2;
 }
 
+.modal-show {
+  display: block;
+}
+
 .modal-close {
   position: absolute;
   border: none;
@@ -2550,10 +2590,6 @@ ins {
   right: 13px;
   cursor: pointer;
   background-color: transparent;
-}
-
-.modal-show {
-  display: block;
 }
 
 .modal-close::before, .modal-close::after {
