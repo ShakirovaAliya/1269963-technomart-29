@@ -1093,14 +1093,13 @@ ins {
   display: block;
 }
 
-.product__action, .new-button {
-  display: inline-block;
+.product__action {
+  display: block;
   font-size: 14px;
   line-height: 18px;
   font-weight: var(--font-weight);
   text-align: center;
   text-transform: uppercase;
-  vertical-align: middle;
   padding-top: 10px;
   padding-bottom: 10px;
   border: none;
@@ -1112,7 +1111,7 @@ ins {
   margin-bottom: 0px;
 }
 
-.product__action--buy, .new-button {
+.product__action--buy {
   position: relative;
   display: flex;
   color: var(--basic-white);
@@ -1124,11 +1123,7 @@ ins {
   background-color: var(--basic-green);
 }
 
-.product__action--buy {
-  display: block;
-}
-
-.product__action--buy::before, .new-button::before {
+.product__action--buy::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -1141,11 +1136,11 @@ ins {
   opacity: 0.3;
 }
 
-.product__action--buy:hover, .new-button:hover {
+.product__action--buy:hover {
   background-color: var(--bright-green);
 }
 
-.product__action--buy:focus, .new-button:focus {
+.product__action--buy:focus {
   background-color: var(--dark-green);
 }
 
@@ -1585,6 +1580,7 @@ ins {
   flex-wrap: wrap;
   padding: 47px 0px;
   padding-bottom: 70px;
+  position: relative;
 }
 
 .about-company {
@@ -1711,6 +1707,23 @@ ins {
 .contacts__text {
   width: 180px;
   margin-bottom: 29px;
+}
+
+.contacts__link-big-map {
+}
+
+.contacts__big-map {
+  display: none;
+  position: absolute;
+  top: 14px;
+  left: 0px;
+  right: 160px;
+  border-top: 7px solid var(--basic-red);
+  cursor: pointer;
+}
+
+.contacts__map:focus .contacts__big-map {
+  display: block;
 }
 
 .contacts__link--help {

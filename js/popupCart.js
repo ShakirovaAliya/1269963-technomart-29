@@ -10,16 +10,13 @@
     let target = evt.target;
     if(target.classList.contains("product__action--buy")) {
       evt.preventDefault();
-      target.replaceWith(buttonBuy);
-      buttonBuy.classList.add("new-button");
       сartPopup.classList.add("modal-show");
       cart.style.backgroundColor = "#ee3643";
-      buttonBuy.replaceWith(target);
     } else if(target.classList.contains("product__action--add-to-bookmarks")) {
+      evt.preventDefault();
       bookmark.style.backgroundColor = "#ee3643";
     };
   });
-
 
   buttonCloseCart.addEventListener("click", function(evt) {
     evt.preventDefault();
