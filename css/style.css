@@ -76,7 +76,8 @@ img {
   margin: -1px;
   border: 0px;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -88,6 +89,7 @@ img {
 .page-body {
   min-height: 100%;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   margin: 0 auto;
@@ -187,6 +189,20 @@ input[type="search"] {
   left: 222px;
 }
 
+input[type="search"]::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: var(--font-weight);
+  color: var(--basic-white);
+}
+
+input[type="search"]::-moz-placeholder {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: var(--font-weight);
+  color: var(--basic-white);
+}
+
 input[type="search"]::placeholder {
   font-size: 18px;
   line-height: 24px;
@@ -196,11 +212,13 @@ input[type="search"]::placeholder {
 
 input[type="search"]:focus {
   background-color: var(--basic-white);
+  outline: thin dotted;
   color: var(--basic-black);
 }
 
 .menu__item--search:focus, .menu__item--search:active {
   background-color: var(--basic-white);
+  outline: thin dotted;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -459,6 +477,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .info__user-wrapper {
   display: grid;
+  grid-template-rows: -webkit-min-content -webkit-min-content;
   grid-template-rows: min-content min-content;
   width: 293px;
   margin-top: 3px;
@@ -715,7 +734,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .slide__photo {
   position: relative;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .slide {
@@ -801,6 +821,9 @@ input[type="search"]::-webkit-search-results-decoration {
 .forward:focus::before, .back:focus::before {
   outline: 5px auto -webkit-focus-ring-color;
 }
+
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 */
 
 .forward::before {
@@ -952,7 +975,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .product__photo {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .products__item:first-child .product__photo {
@@ -1193,7 +1217,8 @@ ins {
 
 
 .catalog-product__photo {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .catalog-product__name {
@@ -1325,7 +1350,8 @@ ins {
 }
 
 .brands__logo {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .brands__item {
@@ -1856,16 +1882,20 @@ ins {
 .sorting__link {
   opacity: 0.3;
   text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: var(--basic-red);
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+  -webkit-text-decoration-color: var(--basic-red);
+          text-decoration-color: var(--basic-red);
 }
 
 .sorting__link:hover {
   opacity: 1;
   color: var(--basic-black);
   text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: var(--basic-red);
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+  -webkit-text-decoration-color: var(--basic-red);
+          text-decoration-color: var(--basic-red);
 }
 
 .sorting__link:focus, .sorting__link:active, .current-sorting-link {
@@ -2068,7 +2098,9 @@ ins {
   display: block;
   position: relative;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .filter-input-checkbox + label::before {
@@ -2568,6 +2600,20 @@ ins {
   border: 2px solid var(--grey-del);
 }
 
+.modal-message__item input::-webkit-input-placeholder, .modal-message__item textarea::-webkit-input-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--grey-del);
+}
+
+.modal-message__item input::-moz-placeholder, .modal-message__item textarea::-moz-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--grey-del);
+}
+
 .modal-message__item input::placeholder, .modal-message__item textarea::placeholder {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -2619,6 +2665,12 @@ ins {
   background-color: var(--dark-red);
 }
 
+@-webkit-keyframes shake {
+  0%, 100% { transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px);}
+  20%, 40%, 60%, 80% { transform: translateX(10px);}
+}
+
 @keyframes shake {
   0%, 100% { transform: translateX(0);}
   10%, 30%, 50%, 70%, 90% { transform: translateX(-10px);}
@@ -2626,8 +2678,10 @@ ins {
 }
 
 .modal-error {
-  animation-name: shake;
-  animation-duration: 0.6s;
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 
 /* modal map */
