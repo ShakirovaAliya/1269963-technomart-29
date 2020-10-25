@@ -1093,7 +1093,7 @@ ins {
   display: block;
 }
 
-.product__action {
+.product__action, .new-button {
   display: inline-block;
   font-size: 14px;
   line-height: 18px;
@@ -1112,7 +1112,7 @@ ins {
   margin-bottom: 0px;
 }
 
-.product__action--buy {
+.product__action--buy, .new-button {
   position: relative;
   display: flex;
   color: var(--basic-white);
@@ -1124,7 +1124,11 @@ ins {
   background-color: var(--basic-green);
 }
 
-.product__action--buy::before {
+.product__action--buy {
+  display: block;
+}
+
+.product__action--buy::before, .new-button::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -1137,11 +1141,11 @@ ins {
   opacity: 0.3;
 }
 
-.product__action--buy:hover {
+.product__action--buy:hover, .new-button:hover {
   background-color: var(--bright-green);
 }
 
-.product__action--buy:focus {
+.product__action--buy:focus, .new-button:focus {
   background-color: var(--dark-green);
 }
 
