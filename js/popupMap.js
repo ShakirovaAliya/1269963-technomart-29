@@ -7,6 +7,12 @@
     mapPopup.classList.add("modal-show");
   });
 
+  map.addEventListener("keydown", function(evt) {
+    if(evt.keyCode === 13)
+    evt.preventDefault();
+    mapPopup.classList.add("modal-show");
+  });
+
   buttonCloseMap.addEventListener("click", function(evt) {
     evt.preventDefault();
     mapPopup.classList.remove("modal-show");
