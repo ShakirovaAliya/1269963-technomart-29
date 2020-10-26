@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 
 /* Variables */
 
@@ -1714,6 +1721,10 @@ ins {
   margin-bottom: 29px;
 }
 
+.contacts__link--map {
+  cursor: pointer;
+}
+
 .contacts__big-map {
   display: none;
   position: absolute;
@@ -1723,7 +1734,7 @@ ins {
   border-top: 7px solid var(--basic-red);
 }
 
-.contacts__link--map:focus .contacts__big-map, .contacts__link--map:active .contacts__big-map  {
+.contacts__link--map:focus-within .contacts__big-map, .contacts__link--map:active .contacts__big-map  {
   display: block;
 }
 
@@ -1759,7 +1770,7 @@ ins {
   transform: rotate(-45deg);
 }
 
-.contacts__link--map:focus .modal-close-map, .contacts__link--map:active .modal-close-map {
+.contacts__link--map:focus-within .modal-close-map, .contacts__link--map:active .modal-close-map {
   display: block;
 }
 

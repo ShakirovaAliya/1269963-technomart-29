@@ -10,8 +10,8 @@
     let isStorageSupport = true;
 
     try {
-      clientStorage = localStorage.setItem("client");
-      messageStorage = localStorage.setItem("messageMail");
+      clientStorage = localStorage.getItem("client");
+      messageStorage = localStorage.getItem("messageMail");
     } catch(err) {
       isStorageSupport = false;
     }
@@ -19,14 +19,10 @@
     writeUs.addEventListener("click", function(evt) {
       evt.preventDefault();
       messagePopup.classList.add("modal-show");
+      client.focus();
       if(clientStorage) {
         client.value = clientStorage;
         messageMail.focus();
-      } else if(messageStorage) {
-        messageMail.value = messageStorage;
-        messageText.focus();
-      } else {
-        client.focus();
       }
     });
 

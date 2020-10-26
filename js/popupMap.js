@@ -1,9 +1,11 @@
   const map = document.querySelector(".contacts__link--map");
   const mapPopup = document.querySelector(".modal-map");
   const buttonCloseMap = mapPopup.querySelector(".modal-close");
+  const bigMap = map.querySelector(".contacts__link-big-map");
 
   map.addEventListener("click", function(evt) {
     evt.preventDefault();
+    bigMap.style.display = "none";
     mapPopup.classList.add("modal-show");
   });
 
