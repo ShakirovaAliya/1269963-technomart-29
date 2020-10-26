@@ -1,3 +1,4 @@
+
 /* Variables */
 
 :root {
@@ -134,6 +135,7 @@ img {
 }
 
 .header__logo-link:active, .header__logo-link:focus {
+  outline: thin dotted var(--dark-red);
   background-color: var(--dark-red);
 }
 
@@ -211,14 +213,14 @@ input[type="search"]::placeholder {
 }
 
 input[type="search"]:focus {
+  outline: thin dotted var(--basic-red);
   background-color: var(--basic-white);
-  outline: thin dotted;
   color: var(--basic-black);
 }
 
 .menu__item--search:focus, .menu__item--search:active {
+  outline: thin dotted var(--basic-red);
   background-color: var(--basic-white);
-  outline: thin dotted;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -286,6 +288,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .menu-item__link--marks:focus, .menu-item__link--cart:focus {
+  outline: thin dotted var(--basic-red);
   background-color: var(--focus-dark);
   opacity: 0.5;
 }
@@ -301,6 +304,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .menu-item__link--checkout:focus {
+  outline: thin dotted var(--basic-red);
   opacity: 0.5;
 }
 
@@ -345,6 +349,11 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-top: 3px;
   border: 3px solid var(--basic-white);
 }
+
+.info__tel:focus {
+  outline: thin dotted var(--dark-red);
+}
+
 
 .info__tel::before {
   content: "";
@@ -410,6 +419,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .nav-item__link:focus, .nav-item__link:active, .current-page {
+  outline: thin dotted var(--basic-red);
   opacity: 0.5;
   background-color: var(--focus-blue);
 }
@@ -442,6 +452,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .account__link:focus {
   color: var(--grey-checkbox-and-icon);
+  outline: thin dotted var(--dark-red);
 }
 
 .account__link--login {
@@ -466,6 +477,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .account__link--login:focus path, .account__link--login:active path {
   fill: var(--grey-checkbox-and-icon);
+  outline: thin dotted var(--dark-red);
 }
 
 .account__link--registration {
@@ -562,6 +574,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .user__link--name:focus path, .user__link--name:active path,
 .user__link--logout:focus path, .user__link--logout:active path {
   fill: var(--grey-checkbox-and-icon);
+  outline: thin dotted var(--dark-red);
 }
 
 .user__link--orders:hover, .user__link--account:hover {
@@ -569,6 +582,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .user__link:focus {
+  outline: thin dotted var(--dark-red);
   color: var(--grey-checkbox-and-icon);
 }
 
@@ -1360,6 +1374,10 @@ ins {
   border: 1px solid var(--grey-card-border);
 }
 
+.brands__item .brands__link:focus {
+  outline: thin dotted var(--basic-red);
+}
+
 .brands__item--bosch {
   padding-top: 54px;
   padding-bottom: 48px;
@@ -2081,6 +2099,10 @@ ins {
   cursor: pointer;
 }
 
+.range-controls .toggle:focus {
+  outline: thin dotted var(--grey-checkbox-and-icon-hover);
+}
+
 .range-controls .toggle-min {
   left: 19px;
 }
@@ -2107,6 +2129,10 @@ ins {
   border-radius: 5px;
   background-color: var(--beige-catalog);
   border: none;
+}
+
+.price-controls input:focus {
+  outline: thin dotted var(--grey-checkbox-and-icon-hover);
 }
 
 .price-controls input[name="min-price"] {
@@ -2183,6 +2209,11 @@ ins {
   border: 2px solid var(--grey-checkbox-and-icon-hover);
 }
 
+.filter-input-checkbox:focus + label::before {
+  border: 4px solid var(--grey-checkbox-and-icon-hover);
+  outline: thin dotted var(--grey-checkbox-and-icon-hover);
+}
+
 .filter-input-checkbox:checked:hover + label::after {
   background-image: url("../img/checkbox-hover.svg");
   background-repeat: no-repeat;
@@ -2200,7 +2231,6 @@ ins {
   border-radius: 50%;
 }
 
-
 .filter-input-radio:checked + label::after {
   content: "";
   position: absolute;
@@ -2216,13 +2246,13 @@ ins {
   border: 4px solid var(--grey-checkbox-and-icon-hover);
 }
 
-.filter-input-radio:checked:hover + label::after {
-  background-color: var(--grey-checkbox-and-icon-hover);
+.filter-input-radio:focus + label::before {
+  border: 4px solid var(--grey-checkbox-and-icon-hover);
+  outline: thin dotted var(--grey-checkbox-and-icon-hover);
 }
 
-.filters input:focus + label::before {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+.filter-input-radio:checked:hover + label::after {
+  background-color: var(--grey-checkbox-and-icon-hover);
 }
 
 
@@ -2235,7 +2265,8 @@ ins {
 }
 
 .filter__button {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   padding: 10px 79px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -2246,6 +2277,10 @@ ins {
   text-align: center;
   border: 1px solid var(--grey-button-border);
   background-color: var(--basic-white);
+}
+
+.filter__button:focus {
+  outline: thin dotted var(--grey-checkbox-and-icon-hover);
 }
 
 
