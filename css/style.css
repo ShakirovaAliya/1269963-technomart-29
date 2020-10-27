@@ -884,7 +884,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   padding-top: 2px;
   padding-right: 14px;
   padding-left: 28px;
@@ -899,6 +899,7 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: var(--font-weight);
   color: var(--dark-blue);
   text-transform: uppercase;
+  width: 264px;
   margin-right: 442px;
 }
 
@@ -1311,7 +1312,7 @@ ins {
 .popular-brands__heading-wrapper {
   display: flex;
   justify-content: flex-start;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   padding-top: 2px;
   padding-right: 19px;
@@ -1327,7 +1328,8 @@ ins {
   font-weight: var(--font-weight);
   color: var(--dark-blue);
   text-transform: uppercase;
-  margin-right: 334px;
+  width: 370px;
+  margin-right: 331px;
 }
 
 .popular-brands__link {
@@ -1342,7 +1344,6 @@ ins {
   padding-right: 38px;
   padding-bottom: 9px;
   padding-left: 39px;
-
   background-color: var(--basic-red);
 }
 
@@ -1370,19 +1371,70 @@ ins {
 
 .brands__item {
   display: flex;
-  justify-content: center;
   align-items: center;
+  max-height: 143px;
   border: 1px solid var(--grey-card-border);
+  cursor: pointer;
 }
 
-.brands__item--bosch {
+.brands__link {
+  display: block;
+}
+
+.brands__logo--bosch {
   padding-top: 54px;
+  padding-right: 47px;
   padding-bottom: 48px;
+  padding-left: 47px;
 }
 
-.brands__item--hitachi {
+.brands__logo--makita {
+  padding-top: 50px;
+  padding-right: 49px;
+  padding-bottom: 55px;
+  padding-left: 48px;
+}
+
+.brands__logo--dewalt {
+  padding-top: 48px;
+  padding-right: 37px;
+  padding-bottom: 53px;
+  padding-left: 37px;
+}
+
+.brands__logo--interscol {
+  padding-top: 34px;
+  padding-right: 11px;
+  padding-bottom: 35px;
+  padding-left: 9px;
+}
+
+.brands__logo--hitachi {
   padding-top: 58px;
-  padding-bottom: 50px;
+  padding-right: 23px;
+  padding-bottom: 56px;
+  padding-left: 28px;
+}
+
+.brands__logo--lg {
+  padding-top: 35px;
+  padding-right: 51px;
+  padding-bottom: 37px;
+  padding-left: 48px;
+}
+
+.brands__logo--aeg {
+  padding-top: 23px;
+  padding-right: 34px;
+  padding-bottom: 24px;
+  padding-left: 35px;
+}
+
+.brands__logo--metabo {
+  padding-top: 34px;
+  padding-right: 6px;
+  padding-bottom: 38px;
+  padding-left: 8px;
 }
 
 .brands__item:hover {
