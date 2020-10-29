@@ -1788,38 +1788,53 @@ ins {
   line-height: 27px;
   font-weight: var(--font-weight);
   color: var(--basic-black);
-}
-
-.contacts__text {
   width: 180px;
   margin-bottom: 29px;
 }
 
-.contacts__link--map {
+.contacts__link--help {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  width: 300px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  margin-top: auto;
+  background-color: var(--basic-red);
+}
+
+.contacts__link--help:hover {
+  background-color: var(--darker-red);
+}
+
+.contacts__link--help:focus {
+  background-color: var(--dark-red);
+}
+
+.contacts__map {
   cursor: pointer;
 }
 
 .contacts__big-map {
-  display: none;
   position: absolute;
+  display: none;
   top: 14px;
   left: 0px;
   right: 160px;
   border-top: 7px solid var(--basic-red);
 }
 
-.maps:focus .contacts__big-map, .maps:active .contacts__big-map  {
-  display: block;
-}
-
 .modal-close-map {
+  position: relative;
   display: none;
-  position: absolute;
   border: none;
   width: 22px;
   height: 22px;
-  top: 25px;
-  right: 13px;
+  bottom: 337px;
+  left: 259px;
   cursor: pointer;
   background-color: transparent;
 }
@@ -1844,30 +1859,9 @@ ins {
   transform: rotate(-45deg);
 }
 
-.maps:focus-within .modal-close-map, .maps:active .modal-close-map {
+.contacts__map:focus-within .contacts__big-map, .contacts__map:active .contacts__big-map,
+.contacts__map:focus-within .modal-close-map, .contacts__map:active .modal-close-map {
   display: block;
-}
-
-.contacts__link--help {
-  display: block;
-  text-align: center;
-  font-size: 14px;
-  line-height: 18px;
-  color: var(--basic-white);
-  text-transform: uppercase;
-  width: 300px;
-  padding-top: 11px;
-  padding-bottom: 9px;
-  margin-top: auto;
-  background-color: var(--basic-red);
-}
-
-.contacts__link--help:hover {
-  background-color: var(--darker-red);
-}
-
-.contacts__link--help:focus {
-  background-color: var(--dark-red);
 }
 
 /* catalog page */

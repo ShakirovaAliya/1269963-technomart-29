@@ -180,14 +180,16 @@ buttonDelivery.addEventListener("keydown", function (evt) {
 
 /* map popup */
 
-const map = document.querySelector(".contacts__link--map");
+const map = document.querySelector(".contacts__map");
 const mapPopup = document.querySelector(".modal-map");
 const buttonCloseMap = mapPopup.querySelector(".modal-close");
-const bigMap = map.querySelector(".contacts__link-big-map");
+const bigMap = map.querySelector(".contacts__big-map");
+const closeBigMap = map.querySelector(".modal-close-map");
 
 map.addEventListener("click", function (evt) {
   evt.preventDefault();
   bigMap.style.display = "none";
+  closeBigMap.style.display = "none";
   mapPopup.classList.add("modal-show");
 });
 
@@ -209,9 +211,10 @@ window.addEventListener("keydown", function (evt) {
       mapPopup.classList.remove("modal-show");
     }
   }
-})
+});
 
-/* message map */
+
+/* message popup */
 
 const writeUs = document.querySelector(".contacts__link--help");
 const messagePopup = document.querySelector(".modal-message");
