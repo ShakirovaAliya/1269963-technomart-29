@@ -235,9 +235,10 @@ writeUs.addEventListener("click", function (evt) {
   evt.preventDefault();
   messagePopup.classList.add("modal-show");
   client.focus();
-  if (clientStorage) {
+   if(clientStorage) {
     client.value = clientStorage;
-    messageMail.focus();
+  } else if(messageStorage) {
+    messageMail.value = messageStorage;
   }
 });
 
